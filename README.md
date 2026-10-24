@@ -1,5 +1,7 @@
 # Merry Watch
 
+[Open the app](https://slopdelop.github.io/merry-watch/) · [GitHub repository](https://github.com/slopdelop/merry-watch)
+
 A personal, iPhone-first Christmas movie tracker. Static HTML, CSS and JavaScript; no runtime dependencies, account, analytics, or backend. Cozy High Street miniature village design with illuminated shop-window navigation.
 
 ## Preview

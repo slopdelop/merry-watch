@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {belongs,isAvailable,validateBackup,localDay} from '../core.js';
+import {belongs,isAvailable,validateBackup,localDay,compareMovies} from '../core.js';
 const c=JSON.parse(fs.readFileSync(new URL('../catalogue.json',import.meta.url),'utf8'));
 test('the supplied Hallmark slate has 34 movies and excludes scripted series',()=>{
   assert.equal(c.movies.filter(m=>m.type==='movie').length,34);
@@ -47,3 +47,7 @@ test('backup round trip preserves ratings and rejects malformed records atomical
   assert.throws(()=>validateBackup({records:r},c.movies));
 });
 test('calendar day does not use UTC conversion',()=>assert.equal(localDay(new Date(2026,9,24,23,59)),'2026-10-24'));
+test('unconfirmed stream dates appear after all dated releases',()=>{
+  const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
+  assert.equal(sorted.at(-1).id,'holiday-baking-championship');
+});

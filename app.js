@@ -1,4 +1,4 @@
-import { FEELINGS, localDay, isAvailable, belongs, validateBackup } from './core.js';
+import { FEELINGS, localDay, isAvailable, belongs, compareMovies, validateBackup } from './core.js';
 const $ = s => document.querySelector(s);
 const KEY = 'merry-watch-v1';
 const symbols = ['☁','◒','❋','★','✧'];
@@ -37,7 +37,7 @@ function imageMarkup(m,detail=false){
 function bindImageFallbacks(root){root.querySelectorAll('img').forEach(img=>{img.addEventListener('error',()=>{img.hidden=true;if(img.classList.contains('detail-image'))img.outerHTML='<div class="detail-image" style="display:grid;place-items:center;font-size:45px" aria-label="Official artwork unavailable">✧</div>';},{once:true});});}
 function visibleMovies(){
   const q=$('#search').value.trim().toLocaleLowerCase(),service=$('#service-filter').value,type=$('#type-filter').value,feeling=$('#reaction-filter').value;
-  return movies.filter(m=>belongs(m,section,records)&&(!q||`${m.title} ${m.synopsis} ${m.cast}`.toLocaleLowerCase().includes(q))&&(service==='all'||m.service===service)&&(type==='all'||m.type===type)&&(section!=='watched'||feeling==='all'||records[m.id]?.feeling===feeling)).sort((a,b)=>section==='watched'?String(records[b.id]?.watchedAt??'').localeCompare(String(records[a.id]?.watchedAt??'')):section==='watch'?String(b.streaming??'').localeCompare(String(a.streaming??'')):String(a.streaming??a.premiere??'9999').localeCompare(String(b.streaming??b.premiere??'9999')));
+  return movies.filter(m=>belongs(m,section,records)&&(!q||`${m.title} ${m.synopsis} ${m.cast}`.toLocaleLowerCase().includes(q))&&(service==='all'||m.service===service)&&(type==='all'||m.type===type)&&(section!=='watched'||feeling==='all'||records[m.id]?.feeling===feeling)).sort((a,b)=>compareMovies(a,b,section,records));
 }
 function render(){
   const [eyebrow,title,description]=labels[section];$('#eyebrow').textContent=eyebrow;$('#section-title').textContent=title;$('#section-description').textContent=description;

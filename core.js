@@ -10,6 +10,11 @@ export function belongs(movie, section, records, today = localDay()) {
   if (section === 'watched') return watched;
   return !watched && (section === 'watch' ? isAvailable(movie,today) : !isAvailable(movie,today));
 }
+export function compareMovies(a,b,section,records) {
+  if(section==='watched') return String(records[b.id]?.watchedAt??'').localeCompare(String(records[a.id]?.watchedAt??''));
+  if(section==='watch') return Number(a.type==='series')-Number(b.type==='series') || String(b.streaming??'').localeCompare(String(a.streaming??''));
+  return String(a.streaming??'9999').localeCompare(String(b.streaming??'9999'));
+}
 export function validateBackup(data, movies) {
   if (!data || data.app !== 'merry-watch' || data.version !== 1 || !data.records || typeof data.records !== 'object' || Array.isArray(data.records)) throw new Error('Choose a Merry Watch backup file.');
   const allowed = new Set(movies.map(m=>m.id));
