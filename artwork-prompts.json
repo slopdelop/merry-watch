@@ -1,6 +1,6 @@
 {
   "tool": "OpenAI built-in image_gen",
-  "purpose": "Natural-proportion village header, three lamp-lit navigation states, and 38 simple bakeable motif cookies",
+  "purpose": "Natural-proportion village header, three lamp-lit navigation states, and 48 simple bakeable motif cookies",
   "header": {
     "file": "assets/village-v2.webp",
     "prompt": "Use case: stylized-concept. Production website header asset, not a mockup. Use the original miniature village image as style reference. Recompose as a wide panoramic 2.4:1 banner, requested canvas 1920 x 800. Maintain natural architecture proportions, do not stretch or flatten houses. Beautiful handcrafted ceramic Christmas village at blue hour, warm red cinema centered, flanking cottages, clocktower, snowy little street, garlands, old gas lamps, collectible macro photograph. Large physical marquee lettering reads exactly \"Merry Watch\" in dark burgundy on illuminated cream with brass edging. Sign prominent and naturally part of cinema architecture, readable on a phone with no overlay. No other text, no device, no blank label."
@@ -210,6 +210,56 @@
       "file": "assets/cookies-v5/great-christmas-light-fight.webp",
       "styleReference": "Approved simple bowling-ball cookie",
       "motifPrompt": "One LARGE GREEN CHRISTMAS LIGHT BULB cutout cookie. Broad teardrop bulb, short gray screw cap with just two white horizontal lines, one white curved shine mark and a tiny red bow beside the cap. No houses, people, writing or light-display scene. Strong simple festive bulb silhouette."
+    },
+    {
+      "id": "a-dogs-perfect-christmas",
+      "file": "assets/cookies-v6/a-dogs-perfect-christmas.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A single chunky dog-food bowl silhouette, bright red flooded icing, a large white bone emblem on the front and a tiny green holly sprig on one rim. Simple black oval food surface."
+    },
+    {
+      "id": "in-a-holidaze",
+      "file": "assets/cookies-v6/in-a-holidaze.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A single chunky tear-off calendar-shaped cookie, white rectangular page and red top binding. One large green looping return arrow fills the page instead of any numbers. Tiny red holly berries in bottom corner."
+    },
+    {
+      "id": "the-gospel-of-christmas",
+      "file": "assets/cookies-v6/the-gospel-of-christmas.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A tiny white church building cutout with a tall steeple, cranberry red roof, one arched green door and a tiny green wreath. Bold simple silhouette, no windows except one gold circle."
+    },
+    {
+      "id": "the-christmas-switch",
+      "file": "assets/cookies-v6/the-christmas-switch.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A single joined pair of chunky curved arrows circling in opposite directions, one red and one green, like swapping directions. Broad smooth icing arrows, with one tiny white snowflake piped on the green arrow. Cutter follows the joined arrow silhouette."
+    },
+    {
+      "id": "the-man-with-the-bag",
+      "file": "assets/cookies-v6/the-man-with-the-bag.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: One bulging red Santa sack silhouette with gathered tied neck and a thick green drawstring bow. One bold white star on the sack. Nothing sticking out, no presents, no people."
+    },
+    {
+      "id": "guarding-stars",
+      "file": "assets/cookies-v6/guarding-stars.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A chunky shield-shaped cookie flooded dark Christmas green with one large golden five-point star in its center and a tiny red bow at its top. Plain bold shield silhouette, no lettering."
+    },
+    {
+      "id": "fraggle-rock-a-holiday-gift",
+      "file": "assets/cookies-v6/fraggle-rock-a-holiday-gift.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: One large round red radish silhouette with two chunky green leaves and a white pointed root tip, a tiny white snowflake on its red body. A simple realistically piped radish, no character or scene."
+    },
+    {
+      "id": "twelve-days-of-snoopy",
+      "file": "assets/cookies-v6/twelve-days-of-snoopy.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: A single red doghouse silhouette with thick white snowy roof, one black arch doorway and a tiny green wreath above the doorway. No dog, no cartoon character. Very simple bold decoration."
+    },
+    {
+      "id": "gabbys-dollhouse-bakers-and-makers",
+      "file": "assets/cookies-v6/gabbys-dollhouse-bakers-and-makers.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: One festive cupcake cutout with a green wrapper of three piped lines, white frosting shaped with two simple cat-ear points, one red cherry on top. No cat face, no characters, just the bold cat-ear cupcake shape."
+    },
+    {
+      "id": "christmas-at-the-zoo",
+      "file": "assets/cookies-v6/christmas-at-the-zoo.webp",
+      "prompt": "Use case: product-mockup. Image 1 is STYLE REFERENCE ONLY: approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie for the specified motif. Square overhead product photograph on warm ivory, centered cookie about 82% frame, fully visible. Golden baked edge, flat smooth flooded royal icing, few raised piped lines, tiny handmade imperfections. Bold basic high contrast and legible at 100px, achievable with a cutter and 3–4 icing colors. One large motif plus tiny festive accent. No people, portraits, intricate scenes, clutter, filigree, sculptures, printed icing, text, logos or extra cookies. Do not copy bowling shape. Match reference lighting and baked texture. Motif: One simple penguin silhouette, black body and white oval belly, two tiny black eye dots, small golden beak, thick red festive scarf. No character likeness, no props, a simple realistically flooded cutout cookie. Animal face dots permitted for this motif."
     }
   ]
 }

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {belongs,isAvailable,validateBackup,localDay,compareMovies} from '../core.js';
 const c=JSON.parse(fs.readFileSync(new URL('../catalogue.json',import.meta.url),'utf8'));
 test('the supplied Hallmark slate has 34 movies and excludes scripted series',()=>{
-  assert.equal(c.movies.filter(m=>m.type==='movie').length,34);
+  assert.equal(c.movies.filter(m=>m.type==='movie'&&m.service==='Hallmark+').length,34);
   assert.equal(c.movies.filter(m=>m.service==='Hallmark+').length,35);
   assert.ok(!c.movies.some(m=>m.title.includes('Mistletoe Murders')));
   assert.equal(new Set(c.movies.map(m=>m.id)).size,c.movies.length);
@@ -52,12 +52,40 @@ test('backup round trip preserves ratings and rejects malformed records atomical
 test('calendar day does not use UTC conversion',()=>assert.equal(localDay(new Date(2026,9,24,23,59)),'2026-10-24'));
 test('unconfirmed stream dates appear after all dated releases',()=>{
   const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
-  assert.deepEqual(new Set(sorted.slice(-2).map(m=>m.id)),new Set(['holiday-baking-championship','great-christmas-light-fight']));
+  const firstUnknown=sorted.findIndex(m=>!m.streaming);
+  assert.ok(firstUnknown>=0);
+  assert.ok(sorted.slice(0,firstUnknown).every(m=>m.streaming));
+  assert.ok(sorted.slice(firstUnknown).every(m=>!m.streaming));
 });
-test('every title has a unique motif cookie and a retained official still',()=>{
+test('every title has its own local cookie and correctly identified detail artwork',()=>{
+  assert.equal(new Set(c.movies.map(m=>m.thumbnail)).size,c.movies.length);
   for(const movie of c.movies){
-    assert.equal(movie.thumbnail,`assets/cookies-v5/${movie.id}.webp`);
-    assert.notEqual(movie.thumbnail,movie.image);
+    assert.ok(movie.thumbnail.startsWith('assets/cookies-'));
+    if(movie.imageKind!=='cookie')assert.notEqual(movie.thumbnail,movie.image);
     assert.ok(fs.existsSync(new URL('../'+movie.thumbnail,import.meta.url)),movie.id);
+    assert.ok(fs.existsSync(new URL('../'+movie.image,import.meta.url)),movie.id+' detail artwork');
   }
+});
+
+test('new streamer releases use their announced dates rather than the Hallmark next-day rule',()=>{
+  const releases={
+    'a-dogs-perfect-christmas':['Netflix','2026-11-04'],
+    'the-gospel-of-christmas':['Netflix','2026-11-11'],
+    'the-christmas-switch':['Netflix','2026-11-12'],
+    'guarding-stars':['Netflix','2026-11-18'],
+    'in-a-holidaze':['Netflix','2026-12-02'],
+    'the-man-with-the-bag':['Prime Video','2026-12-02'],
+    'twelve-days-of-snoopy':['Apple TV','2026-11-13'],
+    'fraggle-rock-a-holiday-gift':['Apple TV','2026-12-04'],
+    'gabbys-dollhouse-bakers-and-makers':['Netflix','2026-12-09'],
+    'christmas-at-the-zoo':['Tubi','2026-11-10']
+  };
+  for(const [id,[service,date]] of Object.entries(releases)){
+    const m=c.movies.find(m=>m.id===id);
+    assert.ok(m,id);assert.equal(m.service,service);assert.equal(m.streaming,date);
+    const before=new Date(date+'T12:00:00Z');before.setUTCDate(before.getUTCDate()-1);
+    assert.equal(isAvailable(m,before.toISOString().slice(0,10)),false,id);
+    assert.equal(isAvailable(m,date),true,id);
+  }
+  assert.equal(c.movies.find(m=>m.id==='gabbys-dollhouse-bakers-and-makers').totalEpisodes,4);
 });

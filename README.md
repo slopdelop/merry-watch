@@ -13,6 +13,7 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 - All 34 movies from the supplied Hallmark October–December 2026 schedule, plus The Hallmark Christmas Experience special.
 - Simple, bakeable iced-cookie motif thumbnails for every title, with original official stills retained in expanded details; original short synopses, cast, TV premiere and next-day Hallmark+ dates.
 - Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, and an unconfirmed-new-season entry for The Great Christmas Light Fight.
+- Ten additional confirmed 2026 releases: five Netflix films, Netflix’s four-episode Bakers and Makers holiday competition, two Apple TV specials, Prime Video’s The Man with the Bag, and Tubi’s Christmas at the Zoo. Each has a new motif cookie and its own streaming date.
 - To watch / Coming soon / Watched through the illuminated shop windows. The collection opens directly to the movie list, with no search, filters, counts or introductory headings.
 - Meh / OK / Good / Great / Holiday magic. Ratings are optional; watched status can be undone or edited.
 - An episode counter for competition shows. A show only moves to Watched when explicitly finished.
@@ -25,9 +26,30 @@ Catalogue checked October 24, 2026. Streaming dates use the device's local calen
 
 The Hallmark schedule and movie details were checked against the [official 2026 preview](https://www.hallmarkchannel.com/christmas/countdown-to-christmas-2026-preview/) and linked individual title pages. Each catalogue record includes its original listing and original artwork URL.
 
-Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). All 38 titles have locally saved official artwork. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
+Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). There are 48 titles. Official artwork is saved locally where available; Bakers and Makers uses its cookie in expanded details until official competition artwork is available. Guarding Stars uses the official announcement portraits; The Christmas Switch uses its official first-look video thumbnail. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
 
-Film stills belong to Hallmark Media. Other show artwork belongs to its credited owners. Fraunces soft-serif headings and movie titles with Nunito body text are self-hosted for reliable loading. The village, storefront states, and cookie motifs were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
+Film stills and promotional artwork belong to their credited owners, including Hallmark Media, Netflix, Amazon MGM Studios, Apple TV, Peanuts, WildBrain, The Jim Henson Company and Tubi / Very Merry Entertainment. Fraunces soft-serif headings and movie titles with Nunito body text are self-hosted for reliable loading. The village, storefront states, and cookie motifs were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
+
+## Other streaming services — October 24 research
+
+Official announcements confirm these US streaming releases:
+
+| Title | Service | Streaming date |
+| --- | --- | --- |
+| A Dog’s Perfect Christmas | Netflix | November 4 |
+| Christmas at the Zoo | Tubi | November 10 |
+| Tyler Perry’s The Gospel of Christmas | Netflix | November 11 |
+| The Christmas Switch | Netflix | November 12 |
+| Snoopy Presents: 12 Days of Snoopy | Apple TV | November 13 |
+| Guarding Stars | Netflix | November 18 |
+| In a Holidaze | Netflix | December 2 |
+| The Man with the Bag | Prime Video | December 2 |
+| Fraggle Rock: A Holiday Gift | Apple TV | December 4 |
+| Gabby’s Dollhouse: Bakers and Makers — 4 holiday episodes | Netflix | December 9 |
+
+Sources: [Netflix fall slate](https://www.netflix.com/tudum/features/new-fall-movies-on-netflix-2026), [Gospel release announcement](https://www.netflix.com/tudum/articles/the-gospel-of-christmas-news-cast-release-date-photos), [The Christmas Switch](https://about.netflix.com/en/news/netflix-unwraps-first-look-at-swedish-holiday-film-the-christmas-switch), [Guarding Stars](https://www.netflix.com/tudum/articles/leighton-meester-jared-padalecki-bodyguard-adaptation-cast-news-movie-name), [Bakers and Makers](https://www.netflix.com/tudum/articles/new-netflix-preschool-shows-games), [Prime Video](https://www.aboutamazon.com/news/entertainment/the-man-with-the-bag-arnold-schwarzenegger-christmas-movie-prime-video), [Apple TV holiday slate](https://www.apple.com/tv-pr/news/2026/09/theres-no-place-like-apple-tv-for-the-holidays/), [Tubi](https://tubitv.com/movies/100063504/christmas-at-the-zoo).
+
+HBO Max’s Wizards of Baking is already included. No additional suitable new HBO Max title or new 2026 original Christmas movie on Peacock, Hulu or Paramount+ was verified in the official pages reviewed. This is a research result, not a claim that none will be announced. Paramount+’s November list contains older Christmas favorites. Disney+’s A Proud Family Wizmas is a scripted-series episode, so it is excluded. Returning library films, theatrical releases without confirmed streaming dates and ordinary scripted series were not added as new streaming originals. The coverage audit is recorded in catalogue.json. No automatic monitoring is configured.
 
 ## GitHub Pages
 

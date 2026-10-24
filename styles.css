@@ -15,3 +15,6 @@ main{border-radius:0;margin-top:-1px;padding-bottom:calc(var(--nav-height) + env
 .shop-nav::after{z-index:0;background:radial-gradient(circle at 8% 64%,#fff4c9b0 0 .7px,transparent 1.4px),radial-gradient(circle at 18% 38%,#fff9e6d0 0 .6px,transparent 1.3px),radial-gradient(circle at 30% 76%,#fff8e9a0 0 .8px,transparent 1.5px),radial-gradient(circle at 42% 49%,#f6d891a0 0 .7px,transparent 1.3px),radial-gradient(circle at 56% 68%,#fff9e6b0 0 .6px,transparent 1.3px),radial-gradient(circle at 69% 32%,#fff9e680 0 .6px,transparent 1.2px),radial-gradient(circle at 77% 78%,#fff9e6b0 0 .8px,transparent 1.6px),radial-gradient(circle at 90% 54%,#fff9e6b0 0 .7px,transparent 1.4px),radial-gradient(circle at 96% 84%,#f5d69ba0 0 .6px,transparent 1.3px)}
 .shop-row{z-index:1;background:transparent}
 .shop-art{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16px);mask-image:linear-gradient(to bottom,transparent 0,#000 16px)}
+
+/* Keep portrait posters and the cookie detail intact. */
+.detail-image.contain{object-fit:contain;background:#faf5ec}
