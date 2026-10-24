@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102d2a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Your little Christmas cinema. Discover holiday movies, see streaming dates, and remember every bit of holiday magic.">
+  <title>Merry Watch · Your little Christmas cinema</title>
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="village" aria-label="Merry Watch, your miniature Christmas cinema">
+    <div class="hero-top"><span>THE CHRISTMAS COLLECTION · 2026</span><button id="settings" class="icon-button" aria-label="Settings and backup">⚙</button></div>
+    <h1 class="marquee">Merry Watch</h1>
+    <div class="snow" aria-hidden="true">✦ <span>·</span> · <span>✧</span> ·</div>
+    <div class="hero-caption">A little village. A little holiday magic.</div>
+  </header>
+  <main id="main">
+    <div class="section-heading"><div><p class="eyebrow" id="eyebrow">YOUR LITTLE CHRISTMAS CINEMA</p><h2 id="section-title">Tonight’s possibilities</h2></div><span id="section-count" class="count-badge">…</span></div>
+    <p class="section-description" id="section-description">Find something merry to settle in with.</p>
+    <div class="search-row"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a film, a face, a little magic…" aria-label="Search titles, descriptions and cast"></label><button class="filter-button" id="filter-toggle" aria-label="Filter movies" aria-expanded="false">☷</button></div>
+    <div id="filters" class="filters" hidden>
+      <label>Service<select id="service-filter"><option value="all">All services</option><option>Hallmark+</option><option>Hulu</option><option>Food Network</option><option>HBO Max</option></select></label>
+      <label>Type<select id="type-filter"><option value="all">Movies & shows</option><option value="movie">Movies</option><option value="series">Festive shows</option><option value="special">Specials</option></select></label>
+      <label id="reaction-filter-wrap" hidden>Feeling<select id="reaction-filter"><option value="all">Any feeling</option><option>Meh</option><option>OK</option><option>Good</option><option>Great</option><option>Holiday magic</option></select></label>
+    </div>
+    <div class="collection-note" id="collection-note"><span aria-hidden="true">✧</span> Streaming dates first. Cozy evenings ahead.</div>
+    <div id="movie-list" aria-live="polite"><p class="loading">Lighting up the village…</p></div>
+    <footer class="catalogue-footer"><span class="footer-sprig" aria-hidden="true">❦</span><p>Made for a season of cozy movie nights.</p><button id="about">About this collection & sources</button></footer>
+  </main>
+  <nav class="shop-nav" aria-label="Movie collections">
+    <div class="shop-row">
+      <button class="shop active" data-section="watch" aria-current="page"><span class="shop-sign">To watch</span><span class="sr-only">Available unwatched titles</span></button>
+      <button class="shop" data-section="soon"><span class="shop-sign">Coming soon</span></button>
+      <button class="shop" data-section="watched"><span class="shop-sign">Watched</span></button>
+    </div><div class="snow-base" aria-hidden="true"></div>
+  </nav>
+</div>
+<dialog id="detail-dialog" class="sheet"><div id="detail-content"></div></dialog>
+<dialog id="rating-dialog" class="sheet rating-sheet"><div class="sheet-handle" aria-hidden="true"></div><button class="close-sheet" data-close aria-label="Close rating">×</button><p class="eyebrow">TICKET PUNCHED. COCOA FINISHED.</p><h2>How did it feel?</h2><p id="rating-title" class="muted"></p><div id="rating-options" class="rating-options"></div><button id="watched-no-rating" class="text-button">Just mark watched for now</button></dialog>
+<dialog id="settings-dialog" class="sheet settings-sheet"><div class="sheet-handle" aria-hidden="true"></div><button class="close-sheet" data-close aria-label="Close settings">×</button><p class="eyebrow">A LITTLE HOUSEKEEPING</p><h2>Your Merry Watch</h2><p>Your watched list and feelings stay on this device. Export a backup before clearing website data or moving to another phone.</p><button class="primary" id="export">↓ Export my watch list</button><label class="secondary file-label">↑ Import a backup<input id="import" type="file" accept="application/json,.json" class="sr-only"></label><p class="fine-print">Import merges your backup into this device. Matching titles take the imported status.</p><hr><h3>Make yourself at home</h3><p>On iPhone, open the published site in Safari, tap Share, then <strong>Add to Home Screen</strong>. Open it from that icon to start your collection.</p><hr><h3>About the collection</h3><p>Hallmark’s 2026 schedule, with TV premieres and next-day Hallmark+ streaming dates. Times and availability can change; the original listing is linked in every title.</p><p>Scripted series such as Mistletoe Murders are excluded. A few festive competition shows and a holiday special are included.</p><p class="fine-print">Catalogue checked October 24, 2026. This V1 catalogue is curated; it does not refresh itself automatically. US availability. Films and stills © Hallmark Media; show artwork belongs to its credited owners. Village and shop artwork created with OpenAI image generation.</p><a class="source-link" href="https://www.hallmarkchannel.com/christmas/countdown-to-christmas-2026-preview/" target="_blank" rel="noopener noreferrer">Hallmark’s official movie guide ↗</a><p class="fine-print" id="storage-status"></p></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<noscript><p class="noscript">Please enable JavaScript to browse and save your Christmas watch list.</p></noscript>
+<script type="module" src="app.js"></script>
+</body>
+</html>

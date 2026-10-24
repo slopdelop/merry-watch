@@ -1,0 +1,1 @@
+{"id":"./","name":"Merry Watch","short_name":"Merry Watch","description":"Your little Christmas cinema","start_url":"./","scope":"./","display":"standalone","background_color":"#faf4e9","theme_color":"#102d2a","icons":[{"src":"assets/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png"}]}
