@@ -51,6 +51,23 @@ test('backup round trip preserves ratings and rejects malformed records atomical
 });
 test('calendar day does not use UTC conversion',()=>assert.equal(localDay(new Date(2026,9,24,23,59)),'2026-10-24'));
 
+test('stars survive backups independently of ratings, episode progress and skipped status',()=>{
+  const m=c.movies[0],id=m.id;
+  for(const status of [
+    {watched:false,feeling:null,episodes:2,watchedAt:null},
+    {watched:true,feeling:'Great',episodes:3,watchedAt:'2026-10-24T20:00:00Z'},
+    {watched:false,wontWatch:true,feeling:null,episodes:1,watchedAt:null}
+  ]){
+    for(const starred of [true,false]){
+      const records={[id]:{...status,starred}};
+      const backup={app:'merry-watch',version:1,records};
+      assert.deepEqual(validateBackup(JSON.parse(JSON.stringify(backup)),c.movies),records);
+      for(const section of ['watch','soon','watched','wontWatch'])assert.equal(belongs(m,section,records,'2026-10-24'),belongs(m,section,{[id]:status},'2026-10-24'));
+    }
+  }
+  for(const starred of ['yes',1,null])assert.throws(()=>validateBackup({app:'merry-watch',version:1,records:{[id]:{watched:false,starred}}},c.movies));
+});
+
 test('won’t-watch titles stay hidden through release day and restore to the appropriate list',()=>{
   const m=c.movies.find(m=>m.id==='wizards-of-baking');
   const records={[m.id]:{watched:false,wontWatch:true,episodes:2,feeling:null,watchedAt:null}};

@@ -25,7 +25,8 @@ export function validateBackup(data, movies) {
     if (!allowed.has(id)) continue;
     if (!r || typeof r !== 'object' || typeof r.watched !== 'boolean' || (r.feeling != null && !FEELINGS.includes(r.feeling)) || !Number.isSafeInteger(r.episodes ?? 0) || (r.episodes ?? 0) < 0 || (r.episodes ?? 0) > 10000 || (r.watchedAt != null && !Number.isFinite(Date.parse(r.watchedAt)))) throw new Error('This backup contains an invalid watch record. Nothing was imported.');
     if (('wontWatch' in r && typeof r.wontWatch !== 'boolean') || (r.wontWatch && r.watched)) throw new Error('This backup contains an invalid watch record. Nothing was imported.');
-    result[id] = { watched:r.watched, feeling:r.feeling ?? null, episodes:r.episodes ?? 0, watchedAt:r.watchedAt ?? null, ...('wontWatch' in r ? {wontWatch:r.wontWatch} : {}) };
+    if ('starred' in r && typeof r.starred !== 'boolean') throw new Error('This backup contains an invalid watch record. Nothing was imported.');
+    result[id] = { watched:r.watched, feeling:r.feeling ?? null, episodes:r.episodes ?? 0, watchedAt:r.watchedAt ?? null, ...('wontWatch' in r ? {wontWatch:r.wontWatch} : {}), ...('starred' in r ? {starred:r.starred} : {}) };
   }
   return result;
 }
