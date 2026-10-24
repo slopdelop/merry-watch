@@ -20,6 +20,7 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 - Meh / OK / Good / Great / Holiday magic. Ratings are optional; watched status can be undone or edited.
 - An episode counter for competition shows. A show only moves to Watched when explicitly finished.
 - Device-local storage and JSON backup export/import. No cross-device sync. Local previews and the eventual GitHub Pages address have separate storage; use export/import to transfer progress.
+- Cookie thumbnails and all shop states preload and decode in the background. Unloaded cookies fade from ivory, while decoded images appear immediately on return.
 - Home Screen manifest, icons, and a service worker. The app shell is cached after the first online load; images cache as viewed. Updates require an online visit. The catalogue is curated, not automatically refreshed.
 
 ## Data and availability

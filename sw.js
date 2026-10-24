@@ -1,6 +1,6 @@
-const CACHE = 'merry-watch-v8-1';
+const CACHE = 'merry-watch-v9-1';
 const ROOT = new URL('./',self.location).href;
-const SHELL = ['./','index.html','styles.css?v=8','core.js?v=8','app.js?v=8','catalogue.json?v=6','manifest.webmanifest','assets/garland-lights.svg?v=1','assets/village-v2.webp','assets/shops-watch-v2.webp','assets/shops-soon-v2.webp','assets/shops-watched-v2.webp','assets/icon-192.png','assets/icon-512.png','assets/apple-touch-icon.png','assets/fonts/fraunces-600.ttf','assets/fonts/fraunces-700.ttf','assets/fonts/nunito-600.ttf','assets/fonts/nunito-700.ttf'];
+const SHELL = ['./','index.html','styles.css?v=9','core.js?v=8','app.js?v=9','catalogue.json?v=6','manifest.webmanifest','assets/garland-lights.svg?v=1','assets/village-v2.webp','assets/shops-watch-v2.webp','assets/shops-soon-v2.webp','assets/shops-watched-v2.webp','assets/icon-192.png','assets/icon-512.png','assets/apple-touch-icon.png','assets/fonts/fraunces-600.ttf','assets/fonts/fraunces-700.ttf','assets/fonts/nunito-600.ttf','assets/fonts/nunito-700.ttf'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('merry-watch-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{

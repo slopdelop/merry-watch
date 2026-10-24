@@ -7,6 +7,29 @@ const ticket = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v5a2
 const escapeHTML = s => String(s??'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalogue, movies=[], records={}, section='watch', selected=null, ratingMovie=null, ratingReturn=null, storageOK=true, toastTimer, previousDay=localDay();
 let sectionScroll={watch:0,soon:0,watched:0};
+
+// Keep decoded artwork alive so replacing list rows does not flash a placeholder.
+const decodedImages=new Set(), artworkLoads=new Map();
+function preloadArtwork(src){
+  if(artworkLoads.has(src))return artworkLoads.get(src).ready;
+  const image=new Image();image.decoding='async';image.src=src;
+  const ready=image.decode().then(()=>{decodedImages.add(src);return image;}).catch(()=>{artworkLoads.delete(src);return null;});
+  artworkLoads.set(src,{image,ready});return ready;
+}
+function updateShopArt(next){
+  const src=`assets/shops-${next}-v2.webp`,art=$('#shop-art');
+  if(art.getAttribute('src')===src)return;
+  if(decodedImages.has(src)){art.src=src;return;}
+  // Retain the previous panorama until its replacement can be painted.
+  preloadArtwork(src).then(image=>{if(image&&section===next)art.src=src;});
+}
+async function warmArtwork(){
+  for(const state of ['watch','soon','watched'])preloadArtwork(`assets/shops-${state}-v2.webp`);
+  const sources=[...new Set([...visibleMovies(),...movies].map(m=>m.thumbnail??m.image))];
+  let next=0;
+  await Promise.all(Array.from({length:4},async()=>{while(next<sources.length)await preloadArtwork(sources[next++]);}));
+}
+
 function notify(message,undo) {
   clearTimeout(toastTimer); const el=$('#toast'); el.replaceChildren(document.createTextNode(message));
   if(undo){const b=document.createElement('button');b.textContent='Undo';b.onclick=()=>{undo();el.hidden=true;};el.append(b);}
@@ -33,9 +56,17 @@ function dateLabel(m){
 }
 function imageMarkup(m,detail=false){
   if(detail)return `<img class="detail-image${m.imageFit==='contain'?' contain':''}" src="${escapeHTML(m.image)}" alt="${escapeHTML(m.title)} — ${m.imageKind==='cookie'?'cookie illustration':'promotional artwork'}">`;
-  return `<div class="thumb-wrap"><span class="thumb-fallback" aria-hidden="true">${m.type==='series'?'❋':'✧'}</span><img src="${escapeHTML(m.thumbnail??m.image)}" alt="" loading="lazy" width="108" height="108">${m.type!=='movie'?`<span class="movie-type">${m.type==='series'?'Festive show':'Special'}</span>`:''}</div>`;
+  return `<div class="thumb-wrap"><span class="thumb-fallback" aria-hidden="true">${m.type==='series'?'❋':'✧'}</span><img class="cookie-thumbnail${decodedImages.has(m.thumbnail??m.image)?' is-ready':''}" src="${escapeHTML(m.thumbnail??m.image)}" alt="" loading="lazy" decoding="async" width="108" height="108">${m.type!=='movie'?`<span class="movie-type">${m.type==='series'?'Festive show':'Special'}</span>`:''}</div>`;
 }
-function bindImageFallbacks(root){root.querySelectorAll('img').forEach(img=>{img.addEventListener('error',()=>{img.hidden=true;if(img.classList.contains('detail-image'))img.outerHTML='<div class="detail-image" style="display:grid;place-items:center;font-size:45px" aria-label="Official artwork unavailable">✧</div>';},{once:true});});}
+function bindImageFallbacks(root){
+  root.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('error',()=>{img.hidden=true;if(img.classList.contains('detail-image'))img.outerHTML='<div class="detail-image" style="display:grid;place-items:center;font-size:45px" aria-label="Official artwork unavailable">✧</div>';},{once:true});
+    if(!img.classList.contains('cookie-thumbnail'))return;
+    const reveal=()=>img.decode().then(()=>{decodedImages.add(img.getAttribute('src'));img.classList.add('is-ready');}).catch(()=>{});
+    img.addEventListener('load',reveal,{once:true});
+    if(img.complete&&img.naturalWidth)reveal();
+  });
+}
 function visibleMovies(){
   return movies.filter(m=>belongs(m,section,records)).sort((a,b)=>compareMovies(a,b,section,records));
 }
@@ -44,7 +75,7 @@ function render(){
   $('#wont-watch-link').hidden=section!=='watched';
   const list=visibleMovies();
   $('.shop-row').dataset.state=section;
-  $('#shop-art').src=`assets/shops-${section}-v2.webp`;
+  updateShopArt(section);
   document.querySelectorAll('.shop').forEach(b=>{const active=b.dataset.section===section;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   let group='',out='';
   for(const m of list){
@@ -81,7 +112,7 @@ function markWontWatch(m){
 }
 function renderWontWatchList(){
   const list=movies.filter(m=>belongs(m,'wontWatch',records)).sort((a,b)=>a.title.localeCompare(b.title));
-  $('#wont-watch-list').innerHTML=list.length?list.map(m=>`<article class="skipped-card"><img src="${escapeHTML(m.thumbnail??m.image)}" alt="" loading="lazy" width="64" height="64"><div><h3>${escapeHTML(m.title)}</h3><p>${escapeHTML(m.service)}</p><button class="restore-button" data-restore="${m.id}" aria-label="Restore ${escapeHTML(m.title)}">Restore to ${isAvailable(m)?'To watch':'Coming soon'} <span aria-hidden="true">↗</span></button></div></article>`).join(''):'<div class="empty"><h3>Nothing skipped</h3><p>Titles you choose not to watch will appear here.</p></div>';
+  $('#wont-watch-list').innerHTML=list.length?list.map(m=>`<article class="skipped-card"><img class="cookie-thumbnail${decodedImages.has(m.thumbnail??m.image)?' is-ready':''}" src="${escapeHTML(m.thumbnail??m.image)}" alt="" loading="lazy" decoding="async" width="64" height="64"><div><h3>${escapeHTML(m.title)}</h3><p>${escapeHTML(m.service)}</p><button class="restore-button" data-restore="${m.id}" aria-label="Restore ${escapeHTML(m.title)}">Restore to ${isAvailable(m)?'To watch':'Coming soon'} <span aria-hidden="true">↗</span></button></div></article>`).join(''):'<div class="empty"><h3>Nothing skipped</h3><p>Titles you choose not to watch will appear here.</p></div>';
   $('#wont-watch-list').querySelectorAll('[data-restore]').forEach(button=>button.onclick=()=>{
     const m=movies.find(m=>m.id===button.dataset.restore);
     save({...records,[m.id]:{...records[m.id],wontWatch:false}});render();
@@ -103,4 +134,4 @@ $('#import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try
 window.addEventListener('storage',e=>{if(e.key===KEY){readStorage();render();}});
 function refreshDate(){const day=localDay();if(day!==previousDay){previousDay=day;render();}}
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDate();});setInterval(refreshDate,60000);
-try{const response=await fetch('catalogue.json?v=6');if(!response.ok)throw new Error('Catalogue request failed');catalogue=await response.json();movies=catalogue.movies;readStorage();render();for(const state of ['watch','soon','watched']){const image=new Image();image.src=`assets/shops-${state}-v2.webp`;}if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});}catch(error){$('#movie-list').innerHTML='<div class="empty"><h3>The village couldn’t open</h3><p>Please refresh while connected to the internet to load the collection.</p><button class="secondary" id="retry">Try again</button></div>';$('#retry').onclick=()=>location.reload();}
+try{const response=await fetch('catalogue.json?v=6');if(!response.ok)throw new Error('Catalogue request failed');catalogue=await response.json();movies=catalogue.movies;readStorage();render();warmArtwork();if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});}catch(error){$('#movie-list').innerHTML='<div class="empty"><h3>The village couldn’t open</h3><p>Please refresh while connected to the internet to load the collection.</p><button class="secondary" id="retry">Try again</button></div>';$('#retry').onclick=()=>location.reload();}

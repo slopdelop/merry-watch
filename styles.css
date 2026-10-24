@@ -43,3 +43,11 @@ main::after{right:0;transform:scaleX(-1)}
 .skipped-card h3{font:700 16px/1.25 Fraunces,Georgia,serif;margin:0;color:var(--ink)}
 .skipped-card p{font-size:11px;color:#846242;margin:5px 0 0}
 .restore-button{background:none;border:0;padding:9px 0 0;min-height:44px;color:var(--wine);font-size:12px;text-align:left;text-decoration:underline;text-underline-offset:3px}
+
+/* New thumbnails fade from ivory; decoded artwork paints immediately on return. */
+.thumb-wrap,.thumb-fallback{background:#faf5ec}
+.thumb-fallback{color:transparent}
+.thumb-wrap:has(img[hidden]) .thumb-fallback{color:#ac966d}
+.cookie-thumbnail{opacity:0;transition:opacity 140ms ease-out}
+.cookie-thumbnail.is-ready{opacity:1}
+@media(prefers-reduced-motion:reduce){.cookie-thumbnail{transition:none}}
