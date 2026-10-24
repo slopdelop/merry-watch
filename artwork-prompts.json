@@ -1,0 +1,215 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "purpose": "Natural-proportion village header, three lamp-lit navigation states, and 38 frosted-cookie thumbnails",
+  "header": {
+    "file": "assets/village-v2.webp",
+    "prompt": "Use case: stylized-concept. Production website header asset, not a mockup. Use the original miniature village image as style reference. Recompose as a wide panoramic 2.4:1 banner, requested canvas 1920 x 800. Maintain natural architecture proportions, do not stretch or flatten houses. Beautiful handcrafted ceramic Christmas village at blue hour, warm red cinema centered, flanking cottages, clocktower, snowy little street, garlands, old gas lamps, collectible macro photograph. Large physical marquee lettering reads exactly \"Merry Watch\" in dark burgundy on illuminated cream with brass edging. Sign prominent and naturally part of cinema architecture, readable on a phone with no overlay. No other text, no device, no blank label."
+  },
+  "navigation": [
+    {
+      "file": "assets/shops-watch-v2.webp",
+      "prompt": "Use case: lighting-weather. Edit this exact 3:1 panoramic miniature village shop image. Preserve EXACT all architecture, framing, object positions, text and natural proportions. Text remains \"To watch\", \"Coming soon\", \"Watched\". Change ONLY lighting to select the LEFT RED SHOP. Turn OFF the lit streetlamp at x=65% between center and right shops. Turn ON the existing large old-fashioned gas lamp at x=4% at far left. Left red shop facade, sign and window should be warmly brightly illuminated by that lamp. Beautiful warm golden pool with subtle light spill onto neighboring central green house and onto snowy pavement, fading naturally. The center and right shops are visibly darker cool evening ambient, with dimmer interior light; keep all labels readable. Match this reference's dim background values for unselected houses; do not make all three equally bright. Only far-left gas lamp is lit. No other changes."
+    },
+    {
+      "file": "assets/shops-soon-v2.webp",
+      "prompt": "Use case: lighting-weather. EDIT TARGET attached production shop navigation asset. Preserve EXACT canvas aspect ratio 3:1, exact architecture and geometry, exact framing, snow, garlands, objects, every letter and spelling of baked-in signs: \"To watch\", \"Coming soon\", \"Watched\". Do not redesign or move any object. Change ONLY light. This is the COMING SOON SELECTED state. Switch OFF the bright lamp at far left; make only the old-fashioned streetlamp beside the CENTER evergreen shop brightly ON. The Coming soon shop sign, facade and snowy pavement are most strongly illuminated in a beautiful soft golden pool from that lamp. Subtle physically realistic warm reflected light spills onto BOTH neighboring houses where visible, fading with distance. The left and right shops remain in darker cool navy evening ambient light with low warm interior glow, still readable. Strong clearly perceptible selected-state illumination, not a digital border or UI overlay. The selected house should obviously be illuminated by a nearby old-time gas lamp. Keep the exact existing miniature craftsmanship and labels. No text added, no distortions, no new architecture."
+    },
+    {
+      "file": "assets/shops-watched-v2.webp",
+      "prompt": "Use case: lighting-weather. Edit this exact 3:1 panoramic miniature village shop image. Preserve EXACT architecture, framing, all objects, colors and all sign text \"To watch\", \"Coming soon\", \"Watched\". Change ONLY which STREETLAMP is on and the light cast. Currently lamp between center and right at x=65% is lit. Turn that lamp OFF. Turn ON the existing small black streetlamp at x=98% at far right outside the ivory Watched house. Strong old-fashioned warm golden lamplight comes from FAR RIGHT, illuminates right ivory facade and large Watched sign, snowy pavement and gently spills leftwards onto adjoining center shop. Right shop clearly brightest; other houses stay in dark cool blue-hour ambient with dim warm interiors. Only far-right lamp lit. No other architectural, text or composition changes. All labels readable."
+    }
+  ],
+  "cookieStylePrompt": "Use case: style-transfer. Input image is the specific official movie/show still to REINTERPRET, not a generic mood reference. Make ONE square thumbnail artwork: a ridiculously elaborate frosted Christmas sugar cookie recreating this photo as an affectionate, OVER-THE-TOP CHEESY CARICATURE. Preserve the distinct people, approximate poses, outfits, hair colors, ethnicities and recognizable scene cues from the supplied photo, but turn everything into hand-piped ROYAL ICING on a real thick golden-baked sugar-cookie plaque. Huge goofy charming heads, tiny bodies, theatrical eyebrows, enormous syrupy grins, rosy piped cheeks, sparkling candy eyes, shameless holiday-romance sweetness. Every face and object must be sculpted/flooded/piped icing, NOT a photograph printed on a cookie and NOT normal human skin. Raised white icing outlines, layered flooded frosting, red and evergreen piping, sugar glitter, silver dragees and outrageous little holly flourishes. Detailed artisan cookie craft inspired by ornate handmade Christmas cutout cookies. Cookie edges visible all around, photographed on warm ivory with a few sugar crumbs, soft natural bakery light. Composition fills square and remains identifiable at 108px thumbnail size, big expressive faces, no tiny writing, no long film title, no watermark. Deliberately kitsch, festive, caricatured and funny. Not a generic gingerbread man.",
+  "cookiePortraits": [
+    {
+      "file": "assets/cookies/tis-the-season-for-setups.webp",
+      "reference": "assets/tis-the-season-for-setups.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): ’Tis the Season for Setups. Story context for scene accents: A ski-resort party planner and an instructor try to pair up their parents. Their own matchmaking plans take an unexpectedly romantic turn.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/holiday-touchdown-a-bears-love-story.webp",
+      "reference": "assets/holiday-touchdown-a-bears-love-story.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Touchdown: A Bears Love Story. Story context for scene accents: A reporter covering a Chicago Bears superfan finds a guide to the city in the woman’s firefighter grandson.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/mr-mrs-christmas.webp",
+      "reference": "assets/mr-mrs-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Mr. & Mrs. Christmas. Story context for scene accents: A single dad reviving a town’s Christmas market teams up with a practical accountant to build some new holiday traditions.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/winter-wonderlanes.webp",
+      "reference": "assets/winter-wonderlanes.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Winter Wonderlanes. Story context for scene accents: Audrey returns to her family’s bowling alley for one last holiday tournament, working alongside the high-school sweetheart she left behind.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/forgotten-holiday.webp",
+      "reference": "assets/forgotten-holiday.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Forgotten Holiday. Story context for scene accents: When Rob loses his memories after an accident, Kathryn retraces their romance to help him remember their life and Christmas together.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/what-if-christmas.webp",
+      "reference": "assets/what-if-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): What If Christmas. Story context for scene accents: Erin gets her dream fashion career in an alternate life, but discovers that success has cost her the marriage she treasures.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/whos-coming-for-christmas.webp",
+      "reference": "assets/whos-coming-for-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Who’s Coming for Christmas?. Story context for scene accents: Julie hopes to fill her grandmother’s table with Christmas Eve guests. A new neighbor, a little girl and unexpected kindness may help.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/adopting-st-nick.webp",
+      "reference": "assets/adopting-st-nick.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Adopting St. Nick. Story context for scene accents: A mother and daughter join an adopt-a-grandparent program and meet a charming organizer and a resident who seems suspiciously like Santa.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/a-danish-christmas.webp",
+      "reference": "assets/a-danish-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): A Danish Christmas. Story context for scene accents: At her family’s Copenhagen inn, Marie mistakes a guest for a travel writer. Her plans to impress him turn into a hygge-filled romance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/merry-memories.webp",
+      "reference": "assets/merry-memories.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Merry Memories. Story context for scene accents: An orderly accountant and a free-spirited teacher help a boy make a Christmas scrapbook for his deployed mother.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/holiday-unplugged.webp",
+      "reference": "assets/holiday-unplugged.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Unplugged. Story context for scene accents: When treasured family videos disappear, a widowed mother declares a screen-free Christmas and searches for the original tapes with a new love.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/a-season-of-promises.webp",
+      "reference": "assets/a-season-of-promises.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): A Season of Promises. Story context for scene accents: Two estranged sisters reunite to find their widowed father a Christmas date, discovering fresh possibilities for their own lives along the way.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/my-christmas-cowboy.webp",
+      "reference": "assets/my-christmas-cowboy.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): My Christmas Cowboy. Story context for scene accents: A Texas news producer reunites with a celebrity host from her past when they must save the town’s Christmas ranch celebration.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/the-nights-before-christmas.webp",
+      "reference": "assets/the-nights-before-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Nights Before Christmas. Story context for scene accents: Marty enjoys reliving Christmas Eve until he falls for Chloe, who forgets him with every reset. Now he wants tomorrow to arrive.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/mistletoe-and-mimosas.webp",
+      "reference": "assets/mistletoe-and-mimosas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Mistletoe and Mimosas. Story context for scene accents: Claire inherits a struggling Christmas bar and challenges a rival club’s handsome manager to a festive competition to save it.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/our-holiday-playbook.webp",
+      "reference": "assets/our-holiday-playbook.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Our Holiday Playbook. Story context for scene accents: Lexi trades baking help for a pretend boyfriend and a star player in her family’s fiercely competitive Christmas football game.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/christmas-in-blue-dog-valley.webp",
+      "reference": "assets/christmas-in-blue-dog-valley.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas in Blue Dog Valley. Story context for scene accents: A Hollywood veterinarian buys a small-town practice and tries to win over the locals, helped by the former owner’s son and a mysterious dog.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/double-booked-for-the-holidays.webp",
+      "reference": "assets/double-booked-for-the-holidays.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Double Booked for the Holidays. Story context for scene accents: Identical twins run a Welsh bookshop over Christmas. A barista, a lord and mistaken identities make their holiday romances wonderfully complicated.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/christmas-delivered.webp",
+      "reference": "assets/christmas-delivered.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas Delivered. Story context for scene accents: On a Christmas visit to her grandmother, a practical tech expert helps a dreamer rescue his Christmas-tree delivery business.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/the-christmas-eve-feast.webp",
+      "reference": "assets/the-christmas-eve-feast.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Christmas Eve Feast. Story context for scene accents: A chef returns to Boston to cook her family’s Feast of the Seven Fishes, finding renewed purpose and a connection with a photographer.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/return-to-santa.webp",
+      "reference": "assets/return-to-santa.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Return to Santa. Story context for scene accents: Santa finally fulfills Jake’s long-lost childhood wish list, sending his orderly adult life—and reunion with an old friend—into festive chaos.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/the-most-wonderful-secret.webp",
+      "reference": "assets/the-most-wonderful-secret.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Most Wonderful Secret. Story context for scene accents: A burned-out teacher follows a town’s secret Christmas scavenger hunt, revives a holiday block party and grows close to an electrician.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/holiday-ever-after-a-disney-world-wish-come-true.webp",
+      "reference": "assets/holiday-ever-after-a-disney-world-wish-come-true.jpg",
+      "additionalPrompt": "Use case: style-transfer. Make a square elaborate decorated Christmas sugar cookie inspired by the festive vacation setting in the reference photo. Focus on its holiday-decorated theme park surroundings, whimsical castle-like towers, snowy icing trees, oversized red bows, garlands and sugar fireworks. No people in this version. Everything is hand-piped royal icing on a thick golden baked cookie plaque, with white scalloped frosting borders, glitter, silver sugar pearls and shamelessly over-the-top Christmas kitsch. Not a printed photo on a cookie. Warm ivory bakery background with crumbs, product photograph of real artisan cookie craft. No film title, logos or watermark. Keep the playful holiday-vacation theme identifiable."
+    },
+    {
+      "file": "assets/cookies/eight-nights-for-love.webp",
+      "reference": "assets/eight-nights-for-love.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Eight Nights for Love. Story context for scene accents: A magical menorah takes Hannah through moments from her past, helping her recognize the love she has overlooked in her best friend.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/miles-to-christmas.webp",
+      "reference": "assets/miles-to-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Miles to Christmas. Story context for scene accents: Snow strands Cassidy with a trucker and his sister on a chaotic Christmas journey home.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/the-snowflake-effect.webp",
+      "reference": "assets/the-snowflake-effect.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Snowflake Effect. Story context for scene accents: An attorney and a shop clerk race to recover a magical snowflake ornament after a gift exchange leaves her with terrible luck.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/a-grand-biltmore-christmas.webp",
+      "reference": "assets/a-grand-biltmore-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): A Grand Biltmore Christmas. Story context for scene accents: A magical hourglass brings Elizabeth from 1915 to present-day Biltmore, where she reconnects with Michael and faces a choice across time.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/the-hallmark-christmas-experience-a-hometown-holiday.webp",
+      "reference": "assets/the-hallmark-christmas-experience-a-hometown-holiday.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Hallmark Christmas Experience: A Hometown Holiday. Story context for scene accents: Jonathan Bennett and Melissa Peterman host a festive Hallmark celebration and a preview of the following year.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/an-angel-in-my-stocking.webp",
+      "reference": "assets/an-angel-in-my-stocking.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): An Angel in My Stocking. Story context for scene accents: Stranded with her ex-husband, Amanda meets a guardian angel who nudges her toward a second chance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/christmas-in-canterbury.webp",
+      "reference": "assets/christmas-in-canterbury.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas in Canterbury. Story context for scene accents: Two rival choirmasters prepare for a Canterbury Cathedral Christmas concert—and discover unexpected harmony.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/snow-globe-town.webp",
+      "reference": "assets/snow-globe-town.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Snow Globe Town. Story context for scene accents: In a town famous for proposals, Emily’s family getaway pairs her with a skeptical journalist and unexpected romantic possibilities.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/noelle-nomads.webp",
+      "reference": "assets/noelle-nomads.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Noelle Nomads. Story context for scene accents: An RV mishap draws a doctor and his daughter into an eccentric campground community and a surprising romance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/hearts-all-aglow.webp",
+      "reference": "assets/hearts-all-aglow.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Hearts All Aglow. Story context for scene accents: A historian and a lawyer team up at a Christmas gala, each hoping to recover something meaningful.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/barking-all-the-way.webp",
+      "reference": "assets/barking-all-the-way.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Barking All the Way. Story context for scene accents: A work-focused realtor agrees to mind a mischievous dog whose antics bring her back together with her high-school sweetheart.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/save-the-date-for-christmas.webp",
+      "reference": "assets/save-the-date-for-christmas.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Save the Date for Christmas. Story context for scene accents: Best friends Susie and Alec swear off weddings and matchmaking, only to be pulled into a last-minute family Christmas wedding.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/holiday-baking-championship.webp",
+      "reference": "assets/holiday-baking-championship.webp",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Baking Championship. Story context for scene accents: Bakers compete in festive challenges.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/wizards-of-baking.webp",
+      "reference": "assets/wizards-of-baking.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): Harry Potter: Wizards of Baking. Story context for scene accents: Cake artists create elaborate Harry Potter showpieces.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    },
+    {
+      "file": "assets/cookies/great-christmas-light-fight.webp",
+      "reference": "assets/great-christmas-light-fight.jpg",
+      "additionalPrompt": "Specific title for context (do not write it on cookie): The Great Christmas Light Fight. Story context for scene accents: Families turn their homes into spectacular Christmas light displays, competing for a trophy and a $50,000 prize.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+    }
+  ]
+}

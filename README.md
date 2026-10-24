@@ -11,8 +11,8 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 ## Included in V1
 
 - All 34 movies from the supplied Hallmark October–December 2026 schedule, plus The Hallmark Christmas Experience special.
-- Official Hallmark film stills, original short synopses, cast, TV premiere and next-day Hallmark+ streaming dates.
-- Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, and existing seasons of The Great Christmas Light Fight.
+- AI frosted-cookie caricature thumbnails for every title, with original official stills retained in expanded details; original short synopses, cast, TV premiere and next-day Hallmark+ dates.
+- Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, and an unconfirmed-new-season entry for The Great Christmas Light Fight.
 - To watch / Coming soon / Watched, search, service and type filters, and reaction filtering in Watched.
 - Meh / OK / Good / Great / Holiday magic. Ratings are optional; watched status can be undone or edited.
 - An episode counter for competition shows. A show only moves to Watched when explicitly finished.
@@ -21,13 +21,13 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 
 ## Data and availability
 
-Catalogue checked October 24, 2026. Streaming dates use the device's local calendar date; a scheduled day is not a guarantee of availability at a particular hour. Hallmark dates are TV premiere + one calendar day. If a service has not announced a streaming date, V1 shows it as unconfirmed rather than deriving a date. The Great Christmas Light Fight entry describes existing Hulu seasons; it does not claim a new 2026 season.
+Catalogue checked October 24, 2026. Streaming dates use the device's local calendar date; a scheduled day is not a guarantee of availability at a particular hour. Hallmark dates are TV premiere + one calendar day. If a service has not announced a streaming date, V1 shows it as unconfirmed rather than deriving a date. The Great Christmas Light Fight entry tracks a prospective new season under dates to confirm. No 2026 premiere was found in ABC’s announcements as of October 24, 2026. The last confirmed season (13) premiered on ABC December 4, 2025 and on Hulu/Disney+ December 5, 2025; this historical date is shown explicitly in its details. [Official streaming announcement](https://press.disneyplus.com/news/holiday-2025).
 
 The Hallmark schedule and movie details were checked against the [official 2026 preview](https://www.hallmarkchannel.com/christmas/countdown-to-christmas-2026-preview/) and linked individual title pages. Each catalogue record includes its original listing and original artwork URL.
 
 Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). All 38 titles have locally saved official artwork. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
 
-Film stills belong to Hallmark Media. Other show artwork belongs to its credited owners. The village and storefront illustrations were generated with OpenAI's built-in image generation tool. This independent personal tracker is not affiliated with the networks.
+Film stills belong to Hallmark Media. Other show artwork belongs to its credited owners. The village, storefront states, and cookie portraits were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
 
 ## GitHub Pages
 

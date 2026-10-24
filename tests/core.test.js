@@ -28,14 +28,17 @@ test('unconfirmed streaming date is never treated as available',()=>{
   assert.equal(isAvailable(m,'2027-01-01'),false);
   assert.equal(belongs(m,'soon',{},'2027-01-01'),true);
   const light=c.movies.find(m=>m.id==='great-christmas-light-fight');
-  assert.equal(isAvailable(light,'2026-10-24'),true);
+  assert.equal(isAvailable(light,'2026-10-24'),false);
   assert.equal(light.premiere,null);
+  assert.equal(light.streaming,null);
+  assert.equal(light.previousStreaming,'2025-12-05');
+  assert.equal(belongs(light,'soon',{},'2026-10-24'),true);
 });
 test('episode progress leaves a show in To watch until explicitly finished',()=>{
-  const m=c.movies.find(m=>m.id==='great-christmas-light-fight');
+  const m=c.movies.find(m=>m.id==='wizards-of-baking');
   const r={[m.id]:{watched:false,episodes:3}};
-  assert.equal(belongs(m,'watch',r,'2026-10-24'),true);
-  assert.equal(belongs(m,'watched',r,'2026-10-24'),false);
+  assert.equal(belongs(m,'watch',r,'2026-11-04'),true);
+  assert.equal(belongs(m,'watched',r,'2026-11-04'),false);
 });
 test('backup round trip preserves ratings and rejects malformed records atomically',()=>{
   const id=c.movies[0].id;const r={[id]:{watched:true,feeling:'Great',episodes:0,watchedAt:'2026-10-24T20:00:00.000Z'}};
@@ -49,5 +52,12 @@ test('backup round trip preserves ratings and rejects malformed records atomical
 test('calendar day does not use UTC conversion',()=>assert.equal(localDay(new Date(2026,9,24,23,59)),'2026-10-24'));
 test('unconfirmed stream dates appear after all dated releases',()=>{
   const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
-  assert.equal(sorted.at(-1).id,'holiday-baking-championship');
+  assert.deepEqual(new Set(sorted.slice(-2).map(m=>m.id)),new Set(['holiday-baking-championship','great-christmas-light-fight']));
+});
+test('every title has a unique generated cookie portrait and a retained official still',()=>{
+  for(const movie of c.movies){
+    assert.equal(movie.thumbnail,`assets/cookies/${movie.id}.webp`);
+    assert.notEqual(movie.thumbnail,movie.image);
+    assert.ok(fs.existsSync(new URL('../'+movie.thumbnail,import.meta.url)),movie.id);
+  }
 });
