@@ -21,7 +21,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/tis-the-season-for-setups.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Parent traps. Après-ski edition."
     },
     {
       "id": "holiday-touchdown-a-bears-love-story",
@@ -40,7 +41,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/holiday-touchdown-a-bears-love-story.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Touchdowns. Touching hands. Da Bears."
     },
     {
       "id": "mr-mrs-christmas",
@@ -59,7 +61,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/mr-mrs-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Dad’s got tinsel. And a supervisor."
     },
     {
       "id": "winter-wonderlanes",
@@ -78,7 +81,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/winter-wonderlanes.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Exes. Strikes. Spare feelings."
     },
     {
       "id": "forgotten-holiday",
@@ -97,7 +101,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/forgotten-holiday.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Amnesia: the ultimate soft launch."
     },
     {
       "id": "what-if-christmas",
@@ -116,7 +121,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/what-if-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Girlbossed into the wrong timeline."
     },
     {
       "id": "whos-coming-for-christmas",
@@ -135,7 +141,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/whos-coming-for-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Table for eight. Plot for two."
     },
     {
       "id": "adopting-st-nick",
@@ -154,7 +161,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/adopting-st-nick.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Rent-a-grandpa. Possibly actual Santa."
     },
     {
       "id": "a-danish-christmas",
@@ -173,7 +181,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/a-danish-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Hygge now. Feelings later."
     },
     {
       "id": "merry-memories",
@@ -192,7 +201,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/merry-memories.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Scrapbooking: a contact sport."
     },
     {
       "id": "holiday-unplugged",
@@ -211,7 +221,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/holiday-unplugged.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Wi-Fi off. Feelings buffering."
     },
     {
       "id": "a-season-of-promises",
@@ -230,7 +241,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/a-season-of-promises.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Dad’s dating. Everybody panic."
     },
     {
       "id": "my-christmas-cowboy",
@@ -249,7 +261,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/my-christmas-cowboy.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Yeehaw, but make it unresolved."
     },
     {
       "id": "the-nights-before-christmas",
@@ -268,7 +281,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/the-nights-before-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Groundhog Day in a festive sweater."
     },
     {
       "id": "mistletoe-and-mimosas",
@@ -287,7 +301,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/mistletoe-and-mimosas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Cocktail rivals. Mistletoe liabilities."
     },
     {
       "id": "our-holiday-playbook",
@@ -306,7 +321,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/our-holiday-playbook.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Fake boyfriend. Real family chaos."
     },
     {
       "id": "christmas-in-blue-dog-valley",
@@ -325,7 +341,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/christmas-in-blue-dog-valley.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Hot vet. Hot mess. Very good dog."
     },
     {
       "id": "double-booked-for-the-holidays",
@@ -344,7 +361,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/double-booked-for-the-holidays.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Twins. Books. Absolutely no confusion."
     },
     {
       "id": "christmas-delivered",
@@ -363,7 +381,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/christmas-delivered.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Trees delivered. Boundaries optional."
     },
     {
       "id": "the-christmas-eve-feast",
@@ -382,7 +401,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/the-christmas-eve-feast.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Seven fishes. One dish of a man."
     },
     {
       "id": "return-to-santa",
@@ -401,7 +421,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/return-to-santa.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Santa found your cringe wish list."
     },
     {
       "id": "the-most-wonderful-secret",
@@ -420,7 +441,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/the-most-wonderful-secret.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Small-town riddles. Big crush energy."
     },
     {
       "id": "holiday-ever-after-a-disney-world-wish-come-true",
@@ -439,7 +461,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/holiday-ever-after-a-disney-world-wish-come-true.webp",
-      "thumbnailKind": "AI frosted-cookie scene inspired by the official holiday setting"
+      "thumbnailKind": "AI frosted-cookie scene inspired by the official holiday setting",
+      "tagline": "Worst date ever. Now with fireworks."
     },
     {
       "id": "eight-nights-for-love",
@@ -458,7 +481,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/eight-nights-for-love.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Eight nights. Zero chill."
     },
     {
       "id": "miles-to-christmas",
@@ -477,7 +501,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/miles-to-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Snowed in. Trucked out. Smitten."
     },
     {
       "id": "the-snowflake-effect",
@@ -496,7 +521,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/the-snowflake-effect.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Cute ornament. Cursed life choices."
     },
     {
       "id": "a-grand-biltmore-christmas",
@@ -515,7 +541,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/a-grand-biltmore-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Time travel. Historically bad flirting."
     },
     {
       "id": "the-hallmark-christmas-experience-a-hometown-holiday",
@@ -534,7 +561,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/the-hallmark-christmas-experience-a-hometown-holiday.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Hallmark’s office Christmas party."
     },
     {
       "id": "an-angel-in-my-stocking",
@@ -553,7 +581,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/an-angel-in-my-stocking.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Divorced. Diverted. Divinely meddled."
     },
     {
       "id": "christmas-in-canterbury",
@@ -572,7 +601,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/christmas-in-canterbury.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Choir rivals. Major treble."
     },
     {
       "id": "snow-globe-town",
@@ -591,7 +621,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/snow-globe-town.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Proposal town. Commitment issues."
     },
     {
       "id": "noelle-nomads",
@@ -610,7 +641,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/noelle-nomads.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "RV there yet? Emotionally, no."
     },
     {
       "id": "hearts-all-aglow",
@@ -629,7 +661,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/hearts-all-aglow.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Two gala crashers. One shared braincell."
     },
     {
       "id": "barking-all-the-way",
@@ -648,7 +681,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/barking-all-the-way.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Dog hired as unpaid matchmaker."
     },
     {
       "id": "save-the-date-for-christmas",
@@ -667,7 +701,8 @@
       "availabilityNote": "Streaming the calendar day after the TV premiere. Exact release time may vary.",
       "imageCredit": "Hallmark Media",
       "thumbnail": "assets/cookies/save-the-date-for-christmas.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Wedding avoidance going brilliantly."
     },
     {
       "id": "holiday-baking-championship",
@@ -687,7 +722,8 @@
       "imageCredit": "Food Network / Hulu",
       "image": "assets/holiday-baking-championship.webp",
       "thumbnail": "assets/cookies/holiday-baking-championship.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "Sugar. Sweat. Butter-based panic."
     },
     {
       "id": "wizards-of-baking",
@@ -708,7 +744,8 @@
       "imageCredit": "Food Network / Wizarding World",
       "image": "assets/wizards-of-baking.jpg",
       "thumbnail": "assets/cookies/wizards-of-baking.webp",
-      "thumbnailKind": "AI frosted-cookie caricature based on official artwork"
+      "thumbnailKind": "AI frosted-cookie caricature based on official artwork",
+      "tagline": "You’re a whisk-ard, Harry."
     },
     {
       "id": "great-christmas-light-fight",
@@ -734,7 +771,8 @@
       "previousPremiere": "2025-12-04",
       "previousStreaming": "2025-12-05",
       "releaseSource": "https://press.disneyplus.com/news/holiday-2025",
-      "releaseCheckSource": "https://www.detpress.com/abc/shows/the-great-christmas-light-fight/press-releases/"
+      "releaseCheckSource": "https://www.detpress.com/abc/shows/the-great-christmas-light-fight/press-releases/",
+      "tagline": "The electric bill is the real villain."
     }
   ]
 }
