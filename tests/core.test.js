@@ -50,6 +50,30 @@ test('backup round trip preserves ratings and rejects malformed records atomical
   assert.throws(()=>validateBackup({records:r},c.movies));
 });
 test('calendar day does not use UTC conversion',()=>assert.equal(localDay(new Date(2026,9,24,23,59)),'2026-10-24'));
+
+test('won’t-watch titles stay hidden through release day and restore to the appropriate list',()=>{
+  const m=c.movies.find(m=>m.id==='wizards-of-baking');
+  const records={[m.id]:{watched:false,wontWatch:true,episodes:2,feeling:null,watchedAt:null}};
+  for(const today of ['2026-10-24','2026-11-04','2027-01-01']){
+    for(const section of ['watch','soon','watched'])assert.equal(belongs(m,section,records,today),false);
+    assert.equal(belongs(m,'wontWatch',records,today),true);
+  }
+  records[m.id].wontWatch=false;
+  assert.equal(belongs(m,'soon',records,'2026-10-24'),true);
+  assert.equal(belongs(m,'watch',records,'2026-11-04'),true);
+  assert.equal(belongs(m,'wontWatch',records,'2026-11-04'),false);
+  assert.equal(records[m.id].episodes,2);
+});
+
+test('backups preserve won’t-watch choices and reject conflicting or malformed statuses',()=>{
+  const id=c.movies[0].id;
+  const records={[id]:{watched:false,wontWatch:true,feeling:null,episodes:2,watchedAt:null}};
+  const backup={app:'merry-watch',version:1,records};
+  assert.deepEqual(validateBackup(JSON.parse(JSON.stringify(backup)),c.movies),records);
+  assert.throws(()=>validateBackup({...backup,records:{[id]:{...records[id],wontWatch:'yes'}}},c.movies));
+  assert.throws(()=>validateBackup({...backup,records:{[id]:{...records[id],watched:true}}},c.movies));
+  assert.equal(validateBackup({...backup,records:{[id]:{...records[id],wontWatch:false}}},c.movies)[id].wontWatch,false);
+});
 test('unconfirmed stream dates appear after all dated releases',()=>{
   const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
   const firstUnknown=sorted.findIndex(m=>!m.streaming);

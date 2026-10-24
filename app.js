@@ -1,4 +1,4 @@
-import { FEELINGS, localDay, isAvailable, belongs, compareMovies, validateBackup } from './core.js';
+import { FEELINGS, localDay, isAvailable, belongs, compareMovies, validateBackup } from './core.js?v=8';
 const $ = s => document.querySelector(s);
 const KEY = 'merry-watch-v1';
 const symbols = ['☁','◒','❋','★','✧'];
@@ -41,6 +41,7 @@ function visibleMovies(){
 }
 function render(){
   $('#section-title').textContent=labels[section];
+  $('#wont-watch-link').hidden=section!=='watched';
   const list=visibleMovies();
   $('.shop-row').dataset.state=section;
   $('#shop-art').src=`assets/shops-${section}-v2.webp`;
@@ -54,21 +55,43 @@ function render(){
   }
   if(!list.length){out=`<div class="empty"><span class="symbol" aria-hidden="true">${section==='watched'?'♡':'✧'}</span><h3>${section==='watched'?'Nothing watched yet':section==='watch'?'All caught up':'Nothing scheduled yet'}</h3><p>${section==='watched'?'Mark a title watched to add it here.':section==='watch'?'Visit Coming soon to see what’s arriving next.':'New releases will appear when the collection is updated.'}</p></div>`;}
   $('#movie-list').innerHTML=out;$('#movie-list').querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>openDetail(b.dataset.id));bindImageFallbacks($('#movie-list'));
+  if($('#wont-watch-dialog').open)renderWontWatchList();
 }
 function switchSection(next){sectionScroll[section]=window.scrollY;section=next;render();window.scrollTo({top:sectionScroll[next],behavior:'instant'});}
 function openDetail(id){
   selected=movies.find(m=>m.id===id);const m=selected,r=records[id];
-  $('#detail-content').innerHTML=`<div class="sheet-close-bar"><button class="close-sheet" data-close aria-label="Close movie details">×</button></div>${imageMarkup(m,true)}<div class="detail-body"><span class="service-pill">${escapeHTML(m.service)}${m.subtitle?' · '+escapeHTML(m.subtitle):''}</span><h2>${escapeHTML(m.title)}</h2>${r?.watched?`<span class="reaction-badge">${escapeHTML(r.feeling??'Watched · not rated')}</span>`:''}<p class="detail-description">${escapeHTML(m.synopsis)}</p><div class="detail-dates"><div><span>Streaming</span><strong>${m.releaseStatus?escapeHTML(m.releaseStatus):m.available?'Existing seasons available':m.streaming?shortDate(m.streaming,true):'Date to be confirmed'}</strong></div>${m.previousStreaming?`<div><span>Last season on Hulu / Disney+</span><strong>${shortDate(m.previousStreaming)} · 2025</strong></div>`:''}${m.premiere&&(m.network!==m.service||!m.streaming)?`<div><span>${escapeHTML(m.network)} premiere</span><strong>${shortDate(m.premiere,true)}${m.airtime?' · '+escapeHTML(m.airtime):''}</strong></div>`:''}</div><p class="detail-note">${escapeHTML(m.availabilityNote)}</p>${m.releaseSource?`<a class="source-link" href="${escapeHTML(m.releaseSource)}" target="_blank" rel="noopener noreferrer">Confirmed season 13 streaming announcement ↗</a>`:''}${m.cast?`<p class="cast"><strong>${m.type==='series'?'Featuring':'Starring'}</strong> ${escapeHTML(m.cast)}</p>`:''}${m.type==='series'?`<div class="episode-controls"><button id="episode-minus" aria-label="Remove one watched episode" ${(r?.episodes??0)===0?'disabled':''}>−</button><output id="episode-count">${r?.episodes??0}${m.totalEpisodes?' / '+m.totalEpisodes:''} episode${(r?.episodes??0)===1?'':'s'} watched</output><button id="episode-plus" aria-label="Add one watched episode" ${m.totalEpisodes&&(r?.episodes??0)>=m.totalEpisodes?'disabled':''}>+</button></div><p class="detail-note">Episode count is a personal tally${m.subtitle?' for '+escapeHTML(m.subtitle.toLowerCase()):''}. The show stays here until you mark it finished.</p>`:''}<button class="primary" id="mark-watched">${ticket}${r?.watched?'Change my feeling':m.type==='series'?'Finish watching & rate':'Mark watched'}</button>${r?.watched?'<button class="secondary" id="mark-unwatched">Move back to unwatched</button>':''}<a class="source-link" href="${escapeHTML(m.source)}" target="_blank" rel="noopener noreferrer">${m.service==='Hulu'?'View Hulu listing':'Original listing & latest information'} ↗</a><p class="image-credit">${m.imageKind==='cookie'?'AI cookie illustration: ':'Official promotional artwork: © '}${escapeHTML(m.imageCredit)}</p></div>`;
+  $('#detail-content').innerHTML=`<div class="sheet-close-bar"><button class="close-sheet" data-close aria-label="Close movie details">×</button></div>${imageMarkup(m,true)}<div class="detail-body"><span class="service-pill">${escapeHTML(m.service)}${m.subtitle?' · '+escapeHTML(m.subtitle):''}</span><h2>${escapeHTML(m.title)}</h2>${r?.watched?`<span class="reaction-badge">${escapeHTML(r.feeling??'Watched · not rated')}</span>`:''}<p class="detail-description">${escapeHTML(m.synopsis)}</p><div class="detail-dates"><div><span>Streaming</span><strong>${m.releaseStatus?escapeHTML(m.releaseStatus):m.available?'Existing seasons available':m.streaming?shortDate(m.streaming,true):'Date to be confirmed'}</strong></div>${m.previousStreaming?`<div><span>Last season on Hulu / Disney+</span><strong>${shortDate(m.previousStreaming)} · 2025</strong></div>`:''}${m.premiere&&(m.network!==m.service||!m.streaming)?`<div><span>${escapeHTML(m.network)} premiere</span><strong>${shortDate(m.premiere,true)}${m.airtime?' · '+escapeHTML(m.airtime):''}</strong></div>`:''}</div><p class="detail-note">${escapeHTML(m.availabilityNote)}</p>${m.releaseSource?`<a class="source-link" href="${escapeHTML(m.releaseSource)}" target="_blank" rel="noopener noreferrer">Confirmed season 13 streaming announcement ↗</a>`:''}${m.cast?`<p class="cast"><strong>${m.type==='series'?'Featuring':'Starring'}</strong> ${escapeHTML(m.cast)}</p>`:''}${m.type==='series'?`<div class="episode-controls"><button id="episode-minus" aria-label="Remove one watched episode" ${(r?.episodes??0)===0?'disabled':''}>−</button><output id="episode-count">${r?.episodes??0}${m.totalEpisodes?' / '+m.totalEpisodes:''} episode${(r?.episodes??0)===1?'':'s'} watched</output><button id="episode-plus" aria-label="Add one watched episode" ${m.totalEpisodes&&(r?.episodes??0)>=m.totalEpisodes?'disabled':''}>+</button></div><p class="detail-note">Episode count is a personal tally${m.subtitle?' for '+escapeHTML(m.subtitle.toLowerCase()):''}. The show stays here until you mark it finished.</p>`:''}<button class="primary" id="mark-watched">${ticket}${r?.watched?'Change my feeling':m.type==='series'?'Finish watching & rate':'Mark watched'}</button>${r?.watched?'<button class="secondary" id="mark-unwatched">Move back to unwatched</button>':'<button class="secondary wont-watch-button" id="mark-wont-watch">Won’t watch</button>'}<a class="source-link" href="${escapeHTML(m.source)}" target="_blank" rel="noopener noreferrer">${m.service==='Hulu'?'View Hulu listing':'Original listing & latest information'} ↗</a><p class="image-credit">${m.imageKind==='cookie'?'AI cookie illustration: ':'Official promotional artwork: © '}${escapeHTML(m.imageCredit)}</p></div>`;
   $('#detail-content').querySelector('[data-close]').onclick=()=>$('#detail-dialog').close();
   $('#mark-watched').onclick=()=>openRating(m);
+  if(!r?.watched)$('#mark-wont-watch').onclick=()=>markWontWatch(m);
   if(r?.watched)$('#mark-unwatched').onclick=()=>{const before=structuredClone(records);save({...records,[id]:{...r,watched:false,feeling:null,watchedAt:null}});$('#detail-dialog').close();render();notify('Moved back to unwatched.',()=>{save(before);render();});};
   if(m.type==='series'){ $('#episode-minus').onclick=()=>setEpisodes(-1);$('#episode-plus').onclick=()=>setEpisodes(1); }
   bindImageFallbacks($('#detail-content'));if(!$('#detail-dialog').open)$('#detail-dialog').showModal();
 }
 function setEpisodes(delta){const m=selected;const r=records[m.id]??{watched:false,feeling:null,watchedAt:null,episodes:0};const count=Math.max(0,Math.min(m.totalEpisodes??10000,(r.episodes??0)+delta));save({...records,[m.id]:{...r,episodes:count}});render();openDetail(m.id);}
 function openRating(m){ratingMovie=m;ratingReturn=$('#detail-dialog').open?m.id:null;$('#detail-dialog').close();$('#rating-title').textContent=m.title;$('#rating-options').innerHTML=FEELINGS.map((f,i)=>`<button class="rating-option" data-feeling="${f}" aria-pressed="${records[m.id]?.feeling===f}"><span aria-hidden="true">${symbols[i]}</span>${f}</button>`).join('');$('#rating-options').querySelectorAll('button').forEach(b=>b.onclick=()=>markWatched(b.dataset.feeling));$('#rating-dialog').showModal();}
-function markWatched(feeling){const m=ratingMovie,before=structuredClone(records);save({...records,[m.id]:{...(records[m.id]??{}),watched:true,feeling,episodes:records[m.id]?.episodes??0,watchedAt:new Date().toISOString()}});ratingReturn=null;$('#rating-dialog').close();render();notify(storageOK?`Saved in Watched${feeling?' · '+feeling:''}.`:'Watched for this session. Export a backup to keep it.',()=>{save(before);render();});}
+function markWatched(feeling){const m=ratingMovie,before=structuredClone(records);save({...records,[m.id]:{...(records[m.id]??{}),watched:true,wontWatch:false,feeling,episodes:records[m.id]?.episodes??0,watchedAt:new Date().toISOString()}});ratingReturn=null;$('#rating-dialog').close();render();notify(storageOK?`Saved in Watched${feeling?' · '+feeling:''}.`:'Watched for this session. Export a backup to keep it.',()=>{save(before);render();});}
 $('#watched-no-rating').onclick=()=>markWatched(null);
+
+function markWontWatch(m){
+  const before=structuredClone(records);
+  save({...records,[m.id]:{...(records[m.id]??{}),watched:false,wontWatch:true,feeling:null,watchedAt:null,episodes:records[m.id]?.episodes??0}});
+  $('#detail-dialog').close();render();
+  notify(storageOK?'Moved to Won’t watch. Find it inside Watched.':'Skipped for this session. Export a backup to keep it.',()=>{save(before);render();});
+}
+function renderWontWatchList(){
+  const list=movies.filter(m=>belongs(m,'wontWatch',records)).sort((a,b)=>a.title.localeCompare(b.title));
+  $('#wont-watch-list').innerHTML=list.length?list.map(m=>`<article class="skipped-card"><img src="${escapeHTML(m.thumbnail??m.image)}" alt="" loading="lazy" width="64" height="64"><div><h3>${escapeHTML(m.title)}</h3><p>${escapeHTML(m.service)}</p><button class="restore-button" data-restore="${m.id}" aria-label="Restore ${escapeHTML(m.title)}">Restore to ${isAvailable(m)?'To watch':'Coming soon'} <span aria-hidden="true">↗</span></button></div></article>`).join(''):'<div class="empty"><h3>Nothing skipped</h3><p>Titles you choose not to watch will appear here.</p></div>';
+  $('#wont-watch-list').querySelectorAll('[data-restore]').forEach(button=>button.onclick=()=>{
+    const m=movies.find(m=>m.id===button.dataset.restore);
+    save({...records,[m.id]:{...records[m.id],wontWatch:false}});render();
+    $('#wont-watch-status').textContent=`${m.title} restored to ${isAvailable(m)?'To watch':'Coming soon'}${storageOK?'':' for this session. Export a backup to keep it'}.`;
+    ($('#wont-watch-list [data-restore]')??$('#wont-watch-dialog [data-close]')).focus();
+  });
+  bindImageFallbacks($('#wont-watch-list'));
+}
+$('#wont-watch-link').onclick=()=>{renderWontWatchList();$('#wont-watch-status').textContent='';$('#wont-watch-dialog').showModal();};
+
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());
 $('#rating-dialog').addEventListener('close',()=>{if(ratingReturn){const id=ratingReturn;ratingReturn=null;openDetail(id);}});
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));

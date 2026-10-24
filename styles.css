@@ -28,3 +28,18 @@ main::before,main::after{content:"";position:absolute;top:4px;bottom:0;width:cla
 main::before{left:0}
 main::after{right:0;transform:scaleX(-1)}
 #movie-list,.catalogue-footer{position:relative}
+
+/* The skipped collection lives behind a quiet link inside Watched. */
+.skipped-link{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:48px;margin:18px 0 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:#fffaf0;color:var(--wine);font-size:14px;text-align:left}
+.skipped-link span{font-size:23px;line-height:1;color:#aa9270}
+.skipped-sheet{padding:0 23px calc(24px + env(safe-area-inset-bottom))}
+.skipped-sheet .sheet-close-bar{margin-inline:-23px}
+.skipped-sheet h2{padding-right:32px}
+.skipped-intro{font-size:13px;line-height:1.5;color:#70563d;margin:12px 0 18px}
+.skipped-status{font-size:12px;line-height:1.5;color:#365b3e}
+.skipped-status:empty{display:none}
+.skipped-card{display:grid;grid-template-columns:64px minmax(0,1fr);gap:13px;align-items:start;background:#fffcf6;border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px}
+.skipped-card img{width:64px;height:64px;object-fit:contain;border-radius:6px}
+.skipped-card h3{font:700 16px/1.25 Fraunces,Georgia,serif;margin:0;color:var(--ink)}
+.skipped-card p{font-size:11px;color:#846242;margin:5px 0 0}
+.restore-button{background:none;border:0;padding:9px 0 0;min-height:44px;color:var(--wine);font-size:12px;text-align:left;text-decoration:underline;text-underline-offset:3px}

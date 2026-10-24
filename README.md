@@ -16,6 +16,7 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 - Ten additional confirmed 2026 releases: five Netflix films, Netflix’s four-episode Bakers and Makers holiday competition, two Apple TV specials, Prime Video’s The Man with the Bag, and Tubi’s Christmas at the Zoo. Each has a new motif cookie and its own streaming date.
 - Steady warm fairy lights, evergreen sprigs and red berries decorate the list margins. Close buttons stay pinned at the upper right while detail, rating and settings sheets scroll.
 - To watch / Coming soon / Watched through the illuminated shop windows. The collection opens directly to the movie list, with no search, filters, counts or introductory headings.
+- Won’t watch hides a title from all main collections. A link inside Watched opens a separate sheet to restore skipped titles to To watch or Coming soon. Choices survive reloads and backup export/import; episode progress is retained.
 - Meh / OK / Good / Great / Holiday magic. Ratings are optional; watched status can be undone or edited.
 - An episode counter for competition shows. A show only moves to Watched when explicitly finished.
 - Device-local storage and JSON backup export/import. No cross-device sync. Local previews and the eventual GitHub Pages address have separate storage; use export/import to transfer progress.
