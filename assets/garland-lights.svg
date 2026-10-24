@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="280" viewBox="0 0 28 280">
+  <defs>
+    <linearGradient id="pine" x2="1" y2="0"><stop stop-color="#173d2c"/><stop offset=".55" stop-color="#386847"/><stop offset="1" stop-color="#204733"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#fff4bb" stop-opacity=".85"/><stop offset=".4" stop-color="#f9d378" stop-opacity=".35"/><stop offset="1" stop-color="#e7b95d" stop-opacity="0"/></radialGradient>
+    <g id="sprig" fill="none" stroke-linecap="round">
+      <path d="M5 25 15 0" stroke="#4a6542" stroke-width="1.2"/>
+      <path d="m7 20-6-9m7 7-6-9m8 4L5 4m7 4-2-7m-3 19 11-4M9 15l12-5M11 10l11-6M13 6l9-5" stroke="url(#pine)" stroke-width="2"/>
+      <path d="m7 21-3-7m5 1-3-7m5 3 6-4m-9 12 7-3" stroke="#668058" stroke-opacity=".65" stroke-width=".6"/>
+    </g>
+    <g id="light">
+      <circle r="12" fill="url(#glow)"/>
+      <path d="M-1.6-4h3.2v3h-3.2z" fill="#796342"/>
+      <ellipse cy="1" rx="2.6" ry="4" fill="#f3c661"/>
+      <ellipse cx="-.5" cy=".4" rx="1.1" ry="2.6" fill="#fff4c1"/>
+    </g>
+  </defs>
+  <path d="M4-8C17 18 2 39 8 62S17 101 7 124 16 170 8 195 17 240 6 288" fill="none" stroke="#244a32" stroke-width="3"/>
+  <g>
+    <use href="#sprig" x="0" y="-9"/><use href="#sprig" x="0" y="15"/>
+    <use href="#sprig" transform="translate(17 66) rotate(156)"/>
+    <use href="#sprig" x="1" y="61"/><use href="#sprig" x="2" y="85"/>
+    <use href="#sprig" transform="translate(18 138) rotate(156)"/>
+    <use href="#sprig" x="0" y="135"/><use href="#sprig" x="1" y="158"/>
+    <use href="#sprig" transform="translate(18 212) rotate(156)"/>
+    <use href="#sprig" x="0" y="207"/><use href="#sprig" x="1" y="231"/>
+    <use href="#sprig" transform="translate(18 283) rotate(156)"/>
+  </g>
+  <path d="M5-6C-1 19 17 32 10 56S1 89 10 112 17 149 8 175 2 212 10 239 12 264 5 282" fill="none" stroke="#b59350" stroke-width=".9"/>
+  <g fill="#a52d37" stroke="#74262f" stroke-width=".5">
+    <circle cx="8" cy="58" r="2.8"/><circle cx="13" cy="61" r="2.5"/><circle cx="7" cy="64" r="2.5"/>
+    <circle cx="7" cy="197" r="2.8"/><circle cx="12" cy="200" r="2.5"/><circle cx="6" cy="203" r="2.5"/>
+  </g>
+  <use href="#light" x="8" y="18"/><use href="#light" x="12" y="91"/>
+  <use href="#light" x="7" y="160"/><use href="#light" x="12" y="232"/>
+</svg>

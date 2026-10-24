@@ -18,3 +18,13 @@ main{border-radius:0;margin-top:-1px;padding-bottom:calc(var(--nav-height) + env
 
 /* Keep portrait posters and the cookie detail intact. */
 .detail-image.contain{object-fit:contain;background:#faf5ec}
+
+/* A zero-height sticky layer keeps the dismiss control above scrolled sheet content. */
+.sheet-close-bar{position:sticky;top:0;height:0;z-index:5;pointer-events:none}
+.rating-sheet .sheet-close-bar,.settings-sheet .sheet-close-bar{margin-inline:-23px}
+.sheet-close-bar .close-sheet{pointer-events:auto;width:44px;height:44px;top:10px;right:10px;background:#fff9eef5;box-shadow:0 2px 9px #3d32122b}
+/* Evergreen sprigs and steady warm fairy lights occupy only the paper margins. */
+main::before,main::after{content:"";position:absolute;top:4px;bottom:0;width:clamp(10px,3.8vw,17px);background:url('assets/garland-lights.svg?v=1') top left / 100% 170px repeat-y;pointer-events:none;opacity:.92}
+main::before{left:0}
+main::after{right:0;transform:scaleX(-1)}
+#movie-list,.catalogue-footer{position:relative}
