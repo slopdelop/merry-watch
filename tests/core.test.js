@@ -54,9 +54,9 @@ test('unconfirmed stream dates appear after all dated releases',()=>{
   const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
   assert.deepEqual(new Set(sorted.slice(-2).map(m=>m.id)),new Set(['holiday-baking-championship','great-christmas-light-fight']));
 });
-test('every title has a unique generated cookie portrait and a retained official still',()=>{
+test('every title has a unique motif cookie and a retained official still',()=>{
   for(const movie of c.movies){
-    assert.equal(movie.thumbnail,`assets/cookies/${movie.id}.webp`);
+    assert.equal(movie.thumbnail,`assets/cookies-v5/${movie.id}.webp`);
     assert.notEqual(movie.thumbnail,movie.image);
     assert.ok(fs.existsSync(new URL('../'+movie.thumbnail,import.meta.url)),movie.id);
   }

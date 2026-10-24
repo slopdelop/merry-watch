@@ -1,6 +1,6 @@
 {
   "tool": "OpenAI built-in image_gen",
-  "purpose": "Natural-proportion village header, three lamp-lit navigation states, and 38 frosted-cookie thumbnails",
+  "purpose": "Natural-proportion village header, three lamp-lit navigation states, and 38 simple bakeable motif cookies",
   "header": {
     "file": "assets/village-v2.webp",
     "prompt": "Use case: stylized-concept. Production website header asset, not a mockup. Use the original miniature village image as style reference. Recompose as a wide panoramic 2.4:1 banner, requested canvas 1920 x 800. Maintain natural architecture proportions, do not stretch or flatten houses. Beautiful handcrafted ceramic Christmas village at blue hour, warm red cinema centered, flanking cottages, clocktower, snowy little street, garlands, old gas lamps, collectible macro photograph. Large physical marquee lettering reads exactly \"Merry Watch\" in dark burgundy on illuminated cream with brass edging. Sign prominent and naturally part of cinema architecture, readable on a phone with no overlay. No other text, no device, no blank label."
@@ -19,197 +19,197 @@
       "prompt": "Use case: lighting-weather. Edit this exact 3:1 panoramic miniature village shop image. Preserve EXACT architecture, framing, all objects, colors and all sign text \"To watch\", \"Coming soon\", \"Watched\". Change ONLY which STREETLAMP is on and the light cast. Currently lamp between center and right at x=65% is lit. Turn that lamp OFF. Turn ON the existing small black streetlamp at x=98% at far right outside the ivory Watched house. Strong old-fashioned warm golden lamplight comes from FAR RIGHT, illuminates right ivory facade and large Watched sign, snowy pavement and gently spills leftwards onto adjoining center shop. Right shop clearly brightest; other houses stay in dark cool blue-hour ambient with dim warm interiors. Only far-right lamp lit. No other architectural, text or composition changes. All labels readable."
     }
   ],
-  "cookieStylePrompt": "Use case: style-transfer. Input image is the specific official movie/show still to REINTERPRET, not a generic mood reference. Make ONE square thumbnail artwork: a ridiculously elaborate frosted Christmas sugar cookie recreating this photo as an affectionate, OVER-THE-TOP CHEESY CARICATURE. Preserve the distinct people, approximate poses, outfits, hair colors, ethnicities and recognizable scene cues from the supplied photo, but turn everything into hand-piped ROYAL ICING on a real thick golden-baked sugar-cookie plaque. Huge goofy charming heads, tiny bodies, theatrical eyebrows, enormous syrupy grins, rosy piped cheeks, sparkling candy eyes, shameless holiday-romance sweetness. Every face and object must be sculpted/flooded/piped icing, NOT a photograph printed on a cookie and NOT normal human skin. Raised white icing outlines, layered flooded frosting, red and evergreen piping, sugar glitter, silver dragees and outrageous little holly flourishes. Detailed artisan cookie craft inspired by ornate handmade Christmas cutout cookies. Cookie edges visible all around, photographed on warm ivory with a few sugar crumbs, soft natural bakery light. Composition fills square and remains identifiable at 108px thumbnail size, big expressive faces, no tiny writing, no long film title, no watermark. Deliberately kitsch, festive, caricatured and funny. Not a generic gingerbread man.",
-  "cookiePortraits": [
+  "cookieStylePrompt": "Use case: product-mockup. Reference image is STYLE ONLY: the user-approved simple bowling-ball sugar cookie. Create ONE new realistically bakeable cutout sugar cookie of the specified motif. Square overhead photograph, fully visible cookie centered taking about 80–85% of image, same warm ivory background and soft natural shadow as reference. A real golden-baked sugar cookie edge, FLAT SMOOTH FLOODED ROYAL ICING, a few slightly raised piped lines, tiny handmade imperfections. BOLD BASIC HIGH-CONTRAST design legible at 100 pixels. An experienced home cookie decorator must actually be able to make it using a shaped cutter and about 3–4 icing colors. One large motif only with a small festive accent. No people, faces, portraits, cartoon characters, illustration panels, landscape scenes, clutter, filigree, dragees, elaborate sculptures, printed photographic icing, text or logos. Do not copy the reference bowling-ball shape; use the specified object's silhouette. No extra cookies or background props. Product photograph rather than a digital icon. \n",
+  "cookieMotifs": [
     {
-      "file": "assets/cookies/tis-the-season-for-setups.webp",
-      "reference": "assets/tis-the-season-for-setups.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): ’Tis the Season for Setups. Story context for scene accents: A ski-resort party planner and an instructor try to pair up their parents. Their own matchmaking plans take an unexpectedly romantic turn.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/tis-the-season-for-setups.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "A red ski-lift gondola cabin cutout cookie: rounded rectangle cabin, two large dark blue windows, one thick short hanging arm. A white snowy roof and a tiny green holly leaf are the festive flair. Minimal flat geometric shapes, no riders or scene."
     },
     {
-      "file": "assets/cookies/holiday-touchdown-a-bears-love-story.webp",
-      "reference": "assets/holiday-touchdown-a-bears-love-story.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Touchdown: A Bears Love Story. Story context for scene accents: A reporter covering a Chicago Bears superfan finds a guide to the city in the woman’s firefighter grandson.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/holiday-touchdown-a-bears-love-story.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "Use case: product-mockup. The attached photograph is the STYLE REFERENCE for real handmade Christmas sugar cookies. Generate a square overhead bakery product photograph of EXACTLY ONE simple CUTOUT SUGAR COOKIE, fully visible, taking 80% of image on plain warm ivory background with a soft natural shadow. Cookie must be realistically achievable by an experienced home cookie decorator with a cutter, flooded royal icing and a few piped lines. Flat smooth flooded icing, subtly raised piping, visible golden baked edge, a few tiny handmade imperfections. BOLD BASIC HIGH-CONTRAST DESIGN that reads instantly at only 100 pixels. No people, faces, characters, picture scenes, relief sculpture, miniature objects, background props, ornament arrangements, complex filigree, silver pearls or lettering. No elaborate rectangular illustrated plaque. Restrained 3–4 icing colors. Not a cartoon rendering: a photographic REAL BAKED COOKIE with an intentionally simple bold graphic design. Keep the framing, scale, ivory background and natural overhead light consistent with the other samples.\nMovie: Holiday Touchdown: A Bears Love Story. Cookie silhouette is ONE horizontal American football oval with pointed ends. Flood warm chocolate brown. Simple raised white icing center seam and five short white laces, and two broad white stripes at the ends. Christmas flair is one small red piped bow near the lower-right edge, just two loops and short tails, no tiny intricate details. A normal football sugar-cookie cutter could produce this. No team logos, letters, scarves, faces or additional objects."
     },
     {
-      "file": "assets/cookies/mr-mrs-christmas.webp",
-      "reference": "assets/mr-mrs-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Mr. & Mrs. Christmas. Story context for scene accents: A single dad reviving a town’s Christmas market teams up with a practical accountant to build some new holiday traditions.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/mr-mrs-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "A Christmas market-stall cutout cookie: compact simple house/stall silhouette with a red-and-white striped awning and a single big dark green tree icon in its cream display window. Only 4 icing colors. No people, bricks, scenery or tiny merchandise."
     },
     {
-      "file": "assets/cookies/winter-wonderlanes.webp",
-      "reference": "assets/winter-wonderlanes.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Winter Wonderlanes. Story context for scene accents: Audrey returns to her family’s bowling alley for one last holiday tournament, working alongside the high-school sweetheart she left behind.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/winter-wonderlanes.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "Use case: product-mockup. The attached photograph is the STYLE REFERENCE for real handmade Christmas sugar cookies. Generate a square overhead bakery product photograph of EXACTLY ONE simple CUTOUT SUGAR COOKIE, fully visible, taking 80% of image on plain warm ivory background with a soft natural shadow. Cookie must be realistically achievable by an experienced home cookie decorator with a cutter, flooded royal icing and a few piped lines. Flat smooth flooded icing, subtly raised piping, visible golden baked edge, a few tiny handmade imperfections. BOLD BASIC HIGH-CONTRAST DESIGN that reads instantly at only 100 pixels. No people, faces, characters, picture scenes, relief sculpture, miniature objects, background props, ornament arrangements, complex filigree, silver pearls or lettering. No elaborate rectangular illustrated plaque. Restrained 3–4 icing colors. Not a cartoon rendering: a photographic REAL BAKED COOKIE with an intentionally simple bold graphic design. Keep the framing, scale, ivory background and natural overhead light consistent with the other samples.\nMovie: Winter Wonderlanes, a romance around a bowling alley. Cookie silhouette is a simple round BOWLING BALL, not a bowling ball plus pin. Flood deep cranberry red. Exactly THREE bold dark icing finger holes grouped in a small triangle near the upper left, so it instantly reads bowling ball. One tiny piped holly sprig in the lower right provides Christmas flair: two simple evergreen leaves and three white berries. No extra snowflakes or decorative border. Large clean red area. Simple, readable, festive, bakeable. No ornament hanger."
     },
     {
-      "file": "assets/cookies/forgotten-holiday.webp",
-      "reference": "assets/forgotten-holiday.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Forgotten Holiday. Story context for scene accents: When Rob loses his memories after an accident, Kathryn retraces their romance to help him remember their life and Christmas together.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/forgotten-holiday.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One cranberry-red HEART cookie with one broad white BANDAGE diagonally across its center and two short red stitch lines on the bandage. Tiny green holly leaf at one end. A bold mended-heart symbol for a romance recovered after amnesia."
     },
     {
-      "file": "assets/cookies/what-if-christmas.webp",
-      "reference": "assets/what-if-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): What If Christmas. Story context for scene accents: Erin gets her dream fashion career in an alternate life, but discovers that success has cost her the marriage she treasures.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/what-if-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One elegant red A-LINE DRESS cutout cookie, broad skirt and short sleeves, with a simple green waist bow and a white piped hem. No mannequin, person or accessories. Fashion-dream Christmas romance distilled to a festive dress."
     },
     {
-      "file": "assets/cookies/whos-coming-for-christmas.webp",
-      "reference": "assets/whos-coming-for-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Who’s Coming for Christmas?. Story context for scene accents: Julie hopes to fill her grandmother’s table with Christmas Eve guests. A new neighbor, a little girl and unexpected kindness may help.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/whos-coming-for-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One round Christmas DINNER PLATE cookie. White flooded center, bold cranberry-red rim, a single folded red triangle napkin in the middle and two small green holly leaves at its corner. Minimal place-setting symbol, no table scene, cutlery collection or people."
     },
     {
-      "file": "assets/cookies/adopting-st-nick.webp",
-      "reference": "assets/adopting-st-nick.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Adopting St. Nick. Story context for scene accents: A mother and daughter join an adopt-a-grandparent program and meet a charming organizer and a resident who seems suspiciously like Santa.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/adopting-st-nick.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One simple SANTA HAT cutout cookie. Bright red flooded pointed hat, broad white fluffy cuff made of just three rounded icing scallops, one white pompom, tiny green holly leaf. No Santa face or character."
     },
     {
-      "file": "assets/cookies/a-danish-christmas.webp",
-      "reference": "assets/a-danish-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): A Danish Christmas. Story context for scene accents: At her family’s Copenhagen inn, Marie mistakes a guest for a travel writer. Her plans to impress him turn into a hygge-filled romance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/a-danish-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "Use case: product-mockup. The attached photograph is the STYLE REFERENCE for real handmade Christmas sugar cookies. Generate a square overhead bakery product photograph of EXACTLY ONE simple CUTOUT SUGAR COOKIE, fully visible, taking 80% of image on plain warm ivory background with a soft natural shadow. Cookie must be realistically achievable by an experienced home cookie decorator with a cutter, flooded royal icing and a few piped lines. Flat smooth flooded icing, subtly raised piping, visible golden baked edge, a few tiny handmade imperfections. BOLD BASIC HIGH-CONTRAST DESIGN that reads instantly at only 100 pixels. No people, faces, characters, picture scenes, relief sculpture, miniature objects, background props, ornament arrangements, complex filigree, silver pearls or lettering. No elaborate rectangular illustrated plaque. Restrained 3–4 icing colors. Not a cartoon rendering: a photographic REAL BAKED COOKIE with an intentionally simple bold graphic design. Keep the framing, scale, ivory background and natural overhead light consistent with the other samples.\nMovie: A Danish Christmas, set at a Copenhagen inn. Cookie silhouette is ONE traditional DANISH WOVEN CHRISTMAS HEART. Use a normal plump heart-shaped sugar cookie, flooded red and white in the iconic simple woven-paper-heart pattern: upper left lobe solid red, upper right lobe solid white, lower heart body a LARGE bold 3-by-3 red/white checker pattern, clipped to heart silhouette. It is a flat icing pattern, not actual woven pastry. Thin piped outlines only where needed. The red and white heart IS the Christmas motif; no additional decorations, holly, words, hanging loop, people or background scene. Clear big color blocks and golden cookie edge. Realistic to flood by hand."
     },
     {
-      "file": "assets/cookies/merry-memories.webp",
-      "reference": "assets/merry-memories.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Merry Memories. Story context for scene accents: An orderly accountant and a free-spirited teacher help a boy make a Christmas scrapbook for his deployed mother.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/merry-memories.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One square red SCRAPBOOK cookie with a thick green spine at left and one large cream photo-frame square centered on its cover, containing just a big red heart. Simple flat flooded icing, no photographs, faces, writing or extra pages."
     },
     {
-      "file": "assets/cookies/holiday-unplugged.webp",
-      "reference": "assets/holiday-unplugged.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Unplugged. Story context for scene accents: When treasured family videos disappear, a widowed mother declares a screen-free Christmas and searches for the original tapes with a new love.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/holiday-unplugged.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One chunky evergreen ELECTRICAL PLUG cutout cookie with two short white prongs and one short curved red cord piped onto its golden-cookie backing. Tiny white snowflake piped on green plug body. One bold unplugged symbol, no screen or background scene."
     },
     {
-      "file": "assets/cookies/a-season-of-promises.webp",
-      "reference": "assets/a-season-of-promises.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): A Season of Promises. Story context for scene accents: Two estranged sisters reunite to find their widowed father a Christmas date, discovering fresh possibilities for their own lives along the way.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/a-season-of-promises.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One connected DOUBLE-HEART cookie, two plump overlapping hearts joined into one bakeable silhouette. Left heart cranberry red, right heart evergreen, one tiny white icing bow across their overlap. Bold simple two-heart symbol for two sisters and Christmas promises. No people."
     },
     {
-      "file": "assets/cookies/my-christmas-cowboy.webp",
-      "reference": "assets/my-christmas-cowboy.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): My Christmas Cowboy. Story context for scene accents: A Texas news producer reunites with a celebrity host from her past when they must save the town’s Christmas ranch celebration.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/my-christmas-cowboy.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One tan COWBOY BOOT cutout cookie with a red cuff, one white piped stitching curve, and a tiny green holly leaf with two red berries at the ankle. No cowboy, horse or scene. Thick sturdy silhouette and very simple icing."
     },
     {
-      "file": "assets/cookies/the-nights-before-christmas.webp",
-      "reference": "assets/the-nights-before-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Nights Before Christmas. Story context for scene accents: Marty enjoys reliving Christmas Eve until he falls for Chloe, who forgets him with every reset. Now he wants tomorrow to arrive.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/the-nights-before-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One round MIDNIGHT CLOCK cookie: dark navy flooded face, broad gold icing rim, two thick white clock hands almost at twelve, and four simple white hour dots. Small red bow at bottom. No numbers or writing. One bold time-loop symbol."
     },
     {
-      "file": "assets/cookies/mistletoe-and-mimosas.webp",
-      "reference": "assets/mistletoe-and-mimosas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Mistletoe and Mimosas. Story context for scene accents: Claire inherits a struggling Christmas bar and challenges a rival club’s handsome manager to a festive competition to save it.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/mistletoe-and-mimosas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One stout CHAMPAGNE FLUTE cutout cookie with a thick sturdy stem and broad base. Cream glass outline, golden-orange drink, three white bubble dots, tiny red bow at the stem. A clean big mimosa icon; no people, bar or drink arrangement."
     },
     {
-      "file": "assets/cookies/our-holiday-playbook.webp",
-      "reference": "assets/our-holiday-playbook.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Our Holiday Playbook. Story context for scene accents: Lexi trades baking help for a pretend boyfriend and a star player in her family’s fiercely competitive Christmas football game.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/our-holiday-playbook.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One green rectangular FOOTBALL PLAYBOOK cookie with a red border. Three bold white O marks, two bold white X marks and one simple curved white arrow as a football-play diagram. No words, people, ball or field scene. The red-and-green palette supplies Christmas flair."
     },
     {
-      "file": "assets/cookies/christmas-in-blue-dog-valley.webp",
-      "reference": "assets/christmas-in-blue-dog-valley.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas in Blue Dog Valley. Story context for scene accents: A Hollywood veterinarian buys a small-town practice and tries to win over the locals, helped by the former owner’s son and a mysterious dog.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/christmas-in-blue-dog-valley.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One bright winter-blue PAW PRINT cookie: joined paw silhouette with four rounded toes and a wide main pad. White piped outline and one big red heart inside the main pad. Tiny green leaf beside the heart. No dog face, people or scene."
     },
     {
-      "file": "assets/cookies/double-booked-for-the-holidays.webp",
-      "reference": "assets/double-booked-for-the-holidays.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Double Booked for the Holidays. Story context for scene accents: Identical twins run a Welsh bookshop over Christmas. A barista, a lord and mistaken identities make their holiday romances wonderfully complicated.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/double-booked-for-the-holidays.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One cutout cookie shaped as a STACK OF TWO CLOSED BOOKS. Lower book evergreen, upper book winter blue, broad cream page blocks, one red ribbon across the two books. Two bold stacked rectangles, no tiny lettering, bookshop scene or people."
     },
     {
-      "file": "assets/cookies/christmas-delivered.webp",
-      "reference": "assets/christmas-delivered.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas Delivered. Story context for scene accents: On a Christmas visit to her grandmother, a practical tech expert helps a dreamer rescue his Christmas-tree delivery business.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/christmas-delivered.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One RED PICKUP TRUCK WITH A CHRISTMAS TREE cutout cookie as a single joined silhouette. A boxy red side-view truck, one cream window, two big black circular wheels, one simple large green triangle tree in its bed. Only red, green, white and black icing. No scenery, extra parcels or fine engine details."
     },
     {
-      "file": "assets/cookies/the-christmas-eve-feast.webp",
-      "reference": "assets/the-christmas-eve-feast.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Christmas Eve Feast. Story context for scene accents: A chef returns to Boston to cook her family’s Feast of the Seven Fishes, finding renewed purpose and a connection with a photographer.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/the-christmas-eve-feast.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One turquoise FISH cutout cookie with a broad simple fish silhouette, three thick white curved scale marks and one small red bow at its tail. One tiny black eye is fine, no cartoon human expression. Bold edible fish symbol for the Feast of the Seven Fishes, not a meal scene."
     },
     {
-      "file": "assets/cookies/return-to-santa.webp",
-      "reference": "assets/return-to-santa.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Return to Santa. Story context for scene accents: Santa finally fulfills Jake’s long-lost childhood wish list, sending his orderly adult life—and reunion with an old friend—into festive chaos.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/return-to-santa.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One cream rectangular LETTER ENVELOPE cookie. Two bold red diagonal lines form the envelope flap. One large green Christmas-tree-shaped stamp in its top right corner and a red heart seal in the middle. No words, address or Santa figure. Simple letter-to-Santa motif."
     },
     {
-      "file": "assets/cookies/the-most-wonderful-secret.webp",
-      "reference": "assets/the-most-wonderful-secret.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Most Wonderful Secret. Story context for scene accents: A burned-out teacher follows a town’s secret Christmas scavenger hunt, revives a holiday block party and grows close to an electrician.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/the-most-wonderful-secret.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One GOLD SKELETON KEY cutout cookie with a large round head, thick shaft and two chunky teeth. Cream filled center of the round head rather than a fragile hole. Small red bow around shaft. Simple bold secret-scavenger-hunt key, no scene or lettering."
     },
     {
-      "file": "assets/cookies/holiday-ever-after-a-disney-world-wish-come-true.webp",
-      "reference": "assets/holiday-ever-after-a-disney-world-wish-come-true.jpg",
-      "additionalPrompt": "Use case: style-transfer. Make a square elaborate decorated Christmas sugar cookie inspired by the festive vacation setting in the reference photo. Focus on its holiday-decorated theme park surroundings, whimsical castle-like towers, snowy icing trees, oversized red bows, garlands and sugar fireworks. No people in this version. Everything is hand-piped royal icing on a thick golden baked cookie plaque, with white scalloped frosting borders, glitter, silver sugar pearls and shamelessly over-the-top Christmas kitsch. Not a printed photo on a cookie. Warm ivory bakery background with crumbs, product photograph of real artisan cookie craft. No film title, logos or watermark. Keep the playful holiday-vacation theme identifiable."
+      "file": "assets/cookies-v5/holiday-ever-after-a-disney-world-wish-come-true.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One simple FAIRYTALE CASTLE cutout cookie: just three chunky pink towers, three winter-blue triangular roofs, a broad cream arched door and white snow caps. A tiny red bow at the base. A generic vacation-castle symbol, no logos, branded characters, people, fireworks or landscape. Maximum five icing colors, bold basic blocks."
     },
     {
-      "file": "assets/cookies/eight-nights-for-love.webp",
-      "reference": "assets/eight-nights-for-love.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Eight Nights for Love. Story context for scene accents: A magical menorah takes Hannah through moments from her past, helping her recognize the love she has overlooked in her best friend.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/eight-nights-for-love.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One rounded arch-shaped dark blue cookie with a LARGE SIMPLE GOLD HANUKKAH MENORAH icon: nine connected upright branches, the middle candle taller, nine little white/gold flame drops, two tiny white star dots. Flat piped icing, no complex scene, Christmas holly, people or words. Bold respectful blue-and-gold Hanukkah design."
     },
     {
-      "file": "assets/cookies/miles-to-christmas.webp",
-      "reference": "assets/miles-to-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Miles to Christmas. Story context for scene accents: Snow strands Cassidy with a trucker and his sister on a chaotic Christmas journey home.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/miles-to-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One cranberry-red SUITCASE cutout cookie with a broad cream handle, two cream straps, a single small green luggage tag and a tiny white snowy top edge. Bold travel-home-for-Christmas icon. No traveler, vehicles or scene."
     },
     {
-      "file": "assets/cookies/the-snowflake-effect.webp",
-      "reference": "assets/the-snowflake-effect.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Snowflake Effect. Story context for scene accents: An attorney and a shop clerk race to recover a magical snowflake ornament after a gift exchange leaves her with terrible luck.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/the-snowflake-effect.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One thick six-pointed SNOWFLAKE cutout cookie. Pale winter-blue flooded base, bold raised white piped central branches with just two short lines off each arm. No lace filigree, pearls or extra motifs. Strong simple snowflake, practically decorateable by hand."
     },
     {
-      "file": "assets/cookies/a-grand-biltmore-christmas.webp",
-      "reference": "assets/a-grand-biltmore-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): A Grand Biltmore Christmas. Story context for scene accents: A magical hourglass brings Elizabeth from 1915 to present-day Biltmore, where she reconnects with Michael and faces a choice across time.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/a-grand-biltmore-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One chunky HOURGLASS cutout cookie with a dark green frame, cream glass interior and two simple gold triangular sand shapes. One small red bow on its broad top bar. No castle, people or time-travel scene. A single readable hourglass icon."
     },
     {
-      "file": "assets/cookies/the-hallmark-christmas-experience-a-hometown-holiday.webp",
-      "reference": "assets/the-hallmark-christmas-experience-a-hometown-holiday.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Hallmark Christmas Experience: A Hometown Holiday. Story context for scene accents: Jonathan Bennett and Melissa Peterman host a festive Hallmark celebration and a preview of the following year.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/the-hallmark-christmas-experience-a-hometown-holiday.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One RED ADMISSION TICKET cookie with two broad notched ends, a big gold star in its center, a few bold white perforation dots along each end and two tiny green holly leaves in a corner. No words, logo, people or event scene. One simple festive ticket."
     },
     {
-      "file": "assets/cookies/an-angel-in-my-stocking.webp",
-      "reference": "assets/an-angel-in-my-stocking.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): An Angel in My Stocking. Story context for scene accents: Stranded with her ex-husband, Amanda meets a guardian angel who nudges her toward a second chance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/an-angel-in-my-stocking.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One single ANGEL WING cutout cookie. Cream-white flooded wing with three broad feather lobes and just three thick gold piped feather lines. One small cranberry-red bow at its base. No angel face, human body, halo character or scene. Very simple soft feather silhouette."
     },
     {
-      "file": "assets/cookies/christmas-in-canterbury.webp",
-      "reference": "assets/christmas-in-canterbury.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Christmas in Canterbury. Story context for scene accents: Two rival choirmasters prepare for a Canterbury Cathedral Christmas concert—and discover unexpected harmony.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/christmas-in-canterbury.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One GOLD CHRISTMAS BELL cutout cookie with a broad gold dome, cream lower rim, small round gold clapper and a red bow at top. One small black musical note piped on the bell ties it to Christmas choirs. No cathedral, people or scene."
     },
     {
-      "file": "assets/cookies/snow-globe-town.webp",
-      "reference": "assets/snow-globe-town.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Snow Globe Town. Story context for scene accents: In a town famous for proposals, Emily’s family getaway pairs her with a skeptical journalist and unexpected romantic possibilities.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/snow-globe-town.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One SNOW GLOBE cutout cookie with a pale blue round dome, simple red trapezoid base, one big cream heart centered inside and three white snow dots. No miniature village, houses, people or scenery inside the globe. Bold proposal-town snow globe symbol."
     },
     {
-      "file": "assets/cookies/noelle-nomads.webp",
-      "reference": "assets/noelle-nomads.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Noelle Nomads. Story context for scene accents: An RV mishap draws a doctor and his daughter into an eccentric campground community and a surprising romance.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/noelle-nomads.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One mint-green CAMPER VAN cutout cookie in side view. Simple rounded van silhouette, two large cream windows, two big black wheel circles and one small red bow on its door. No people, scenery or intricate vehicle details. Four icing colors, strong easy-to-read travel icon."
     },
     {
-      "file": "assets/cookies/hearts-all-aglow.webp",
-      "reference": "assets/hearts-all-aglow.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Hearts All Aglow. Story context for scene accents: A historian and a lawyer team up at a Christmas gala, each hoping to recover something meaningful.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/hearts-all-aglow.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One round BLACK VINYL RECORD cookie with three bold cream concentric groove lines, a large red heart-shaped center label and two tiny green holly leaves at lower edge. No tiny writing, singer or museum scene. Simple music-and-romance icon."
     },
     {
-      "file": "assets/cookies/barking-all-the-way.webp",
-      "reference": "assets/barking-all-the-way.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Barking All the Way. Story context for scene accents: A work-focused realtor agrees to mind a mischievous dog whose antics bring her back together with her high-school sweetheart.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/barking-all-the-way.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One broad WHITE DOG BONE cutout cookie with two rounded ends and a small bright red bow around its center, plus two tiny green holly leaves. No dog face, paw print, person or scene. Bold classic bone silhouette."
     },
     {
-      "file": "assets/cookies/save-the-date-for-christmas.webp",
-      "reference": "assets/save-the-date-for-christmas.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Save the Date for Christmas. Story context for scene accents: Best friends Susie and Alec swear off weddings and matchmaking, only to be pulled into a last-minute family Christmas wedding.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/save-the-date-for-christmas.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One GOLD WEDDING RING cutout cookie with a chunky circular band and a big cream diamond silhouette on top. The ring center remains cream icing on solid cookie rather than a fragile hollow hole. One tiny red bow at the lower edge. Simple bold ring icon, no couple or wedding scene."
     },
     {
-      "file": "assets/cookies/holiday-baking-championship.webp",
-      "reference": "assets/holiday-baking-championship.webp",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Holiday Baking Championship. Story context for scene accents: Bakers compete in festive challenges.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/holiday-baking-championship.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One chunky dark green OVEN MITT cutout cookie with one broad cream cuff and a big red heart in the middle. Two short white icing quilting lines only. A simple baking-mitt symbol, no hands, bakers, kitchen or elaborate cake."
     },
     {
-      "file": "assets/cookies/wizards-of-baking.webp",
-      "reference": "assets/wizards-of-baking.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): Harry Potter: Wizards of Baking. Story context for scene accents: Cake artists create elaborate Harry Potter showpieces.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/wizards-of-baking.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One MAGIC WAND cutout cookie as a single thick connected shape: short chocolate-brown wand shaft with a large gold five-pointed star tip and one tiny red icing bow near the handle. Cream piped highlight on star. No branded symbols, people, wizard faces or scene."
     },
     {
-      "file": "assets/cookies/great-christmas-light-fight.webp",
-      "reference": "assets/great-christmas-light-fight.jpg",
-      "additionalPrompt": "Specific title for context (do not write it on cookie): The Great Christmas Light Fight. Story context for scene accents: Families turn their homes into spectacular Christmas light displays, competing for a trophy and a $50,000 prize.. If reference is a montage of faces, create an icing caricature ensemble. If it is a building, holiday event or title artwork without people, recreate its distinctive miniature scene or festive lettering as spectacular piped cookie art instead of inventing a cast."
+      "file": "assets/cookies-v5/great-christmas-light-fight.webp",
+      "styleReference": "Approved simple bowling-ball cookie",
+      "motifPrompt": "One LARGE GREEN CHRISTMAS LIGHT BULB cutout cookie. Broad teardrop bulb, short gray screw cap with just two white horizontal lines, one white curved shine mark and a tiny red bow beside the cap. No houses, people, writing or light-display scene. Strong simple festive bulb silhouette."
     }
   ]
 }

@@ -1,6 +1,6 @@
-const CACHE = 'merry-watch-v4-1';
+const CACHE = 'merry-watch-v5-1';
 const ROOT = new URL('./',self.location).href;
-const SHELL = ['./','index.html','styles.css?v=4','core.js','app.js?v=3','catalogue.json?v=3','manifest.webmanifest','assets/village-v2.webp','assets/shops-watch-v2.webp','assets/shops-soon-v2.webp','assets/shops-watched-v2.webp','assets/icon-192.png','assets/icon-512.png','assets/apple-touch-icon.png'];
+const SHELL = ['./','index.html','styles.css?v=5','core.js','app.js?v=5','catalogue.json?v=5','manifest.webmanifest','assets/village-v2.webp','assets/shops-watch-v2.webp','assets/shops-soon-v2.webp','assets/shops-watched-v2.webp','assets/icon-192.png','assets/icon-512.png','assets/apple-touch-icon.png','assets/fonts/fraunces-600.ttf','assets/fonts/fraunces-700.ttf','assets/fonts/nunito-600.ttf','assets/fonts/nunito-700.ttf'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('merry-watch-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{

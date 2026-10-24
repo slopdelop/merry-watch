@@ -2,7 +2,7 @@ import { FEELINGS, localDay, isAvailable, belongs, compareMovies, validateBackup
 const $ = s => document.querySelector(s);
 const KEY = 'merry-watch-v1';
 const symbols = ['☁','◒','❋','★','✧'];
-const labels = {watch:['YOUR LITTLE CHRISTMAS CINEMA','Tonight’s possibilities','Available to stream, waiting for a cozy evening.'],soon:['GOOD THINGS ARE ON THEIR WAY','Coming to the village','Your next little holiday escape, by streaming date.'],watched:['YOUR CHRISTMAS KEEPSAKES','The memories you’ve made','Every film, every feeling, a little holiday history.']};
+const labels = {watch:'To watch',soon:'Coming soon',watched:'Watched'};
 const ticket = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4V5Z"/><path d="m9 12 2 2 4-4"/></svg>';
 const escapeHTML = s => String(s??'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalogue, movies=[], records={}, section='watch', selected=null, ratingMovie=null, ratingReturn=null, storageOK=true, toastTimer, previousDay=localDay();
@@ -37,25 +37,22 @@ function imageMarkup(m,detail=false){
 }
 function bindImageFallbacks(root){root.querySelectorAll('img').forEach(img=>{img.addEventListener('error',()=>{img.hidden=true;if(img.classList.contains('detail-image'))img.outerHTML='<div class="detail-image" style="display:grid;place-items:center;font-size:45px" aria-label="Official artwork unavailable">✧</div>';},{once:true});});}
 function visibleMovies(){
-  const q=$('#search').value.trim().toLocaleLowerCase(),service=$('#service-filter').value,type=$('#type-filter').value,feeling=$('#reaction-filter').value;
-  return movies.filter(m=>belongs(m,section,records)&&(!q||`${m.title} ${m.tagline} ${m.synopsis} ${m.cast}`.toLocaleLowerCase().includes(q))&&(service==='all'||m.service===service)&&(type==='all'||m.type===type)&&(section!=='watched'||feeling==='all'||records[m.id]?.feeling===feeling)).sort((a,b)=>compareMovies(a,b,section,records));
+  return movies.filter(m=>belongs(m,section,records)).sort((a,b)=>compareMovies(a,b,section,records));
 }
 function render(){
-  const [eyebrow,title,description]=labels[section];$('#eyebrow').textContent=eyebrow;$('#section-title').textContent=title;$('#section-description').textContent=description;
-  const list=visibleMovies();$('#section-count').textContent=list.length;
-  $('#reaction-filter-wrap').hidden=section!=='watched';
-  $('#collection-note').innerHTML=section==='watched'?'<span aria-hidden="true">✧</span> Your own little collection of Christmas memories.':'<span aria-hidden="true">✧</span> Cookie portraits. Real movie-night possibilities.';
+  $('#section-title').textContent=labels[section];
+  const list=visibleMovies();
   $('.shop-row').dataset.state=section;
   $('#shop-art').src=`assets/shops-${section}-v2.webp`;
   document.querySelectorAll('.shop').forEach(b=>{const active=b.dataset.section===section;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   let group='',out='';
   for(const m of list){
     const r=records[m.id];
-    const groupName=section==='soon'?(m.streaming?new Date(m.streaming+'T12:00:00').toLocaleDateString(undefined,{month:'long'}):'Streaming dates to confirm'):section==='watch'?(m.type==='series'?'Festive shows':'Ready for movie night'):'';
+    const groupName=section==='soon'?(m.streaming?new Date(m.streaming+'T12:00:00').toLocaleDateString(undefined,{month:'long'}):'Streaming dates to confirm'):'';
     if(groupName!==group){group=groupName;out+=`<h3 class="movie-group-title">${escapeHTML(group)}</h3>`;}
     out+=`<article class="movie-card"><button class="movie-open" data-id="${m.id}" aria-label="Details for ${escapeHTML(m.title)}">${imageMarkup(m)}<div class="movie-copy"><h3 class="movie-title">${escapeHTML(m.title)}</h3><span class="movie-service">${escapeHTML(m.service)}${m.subtitle?' · '+escapeHTML(m.subtitle):''}</span><p class="movie-date">${escapeHTML(dateLabel(m))}</p><p class="movie-tagline">${escapeHTML(m.tagline)}</p>${r?.watched?`<span class="reaction-badge">${escapeHTML(r.feeling??'Watched · not rated')}</span>`:r?.episodes?`<div class="episode-badge">${r.episodes} episode${r.episodes===1?'':'s'} watched</div>`:''}</div><span class="row-chevron" aria-hidden="true">›</span></button></article>`;
   }
-  if(!list.length){const filtered=$('#search').value||$('#service-filter').value!=='all'||$('#type-filter').value!=='all'||(section==='watched'&&$('#reaction-filter').value!=='all');out=`<div class="empty"><span class="symbol" aria-hidden="true">${section==='watched'?'♡':'✧'}</span><h3>${filtered?'No matches in this shop':section==='watched'?'Your story starts here':section==='watch'?'All caught up':'The village is taking a breather'}</h3><p>${filtered?'Try another search or change your filters.':section==='watched'?'Mark a movie watched and choose your feeling. We’ll keep its memory here.':section==='watch'?'Visit Coming soon to see what’s arriving next.':'New titles will appear here when the catalogue is updated.'}</p></div>`;}
+  if(!list.length){out=`<div class="empty"><span class="symbol" aria-hidden="true">${section==='watched'?'♡':'✧'}</span><h3>${section==='watched'?'Nothing watched yet':section==='watch'?'All caught up':'Nothing scheduled yet'}</h3><p>${section==='watched'?'Mark a title watched to add it here.':section==='watch'?'Visit Coming soon to see what’s arriving next.':'New releases will appear when the collection is updated.'}</p></div>`;}
   $('#movie-list').innerHTML=out;$('#movie-list').querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>openDetail(b.dataset.id));bindImageFallbacks($('#movie-list'));
 }
 function switchSection(next){sectionScroll[section]=window.scrollY;section=next;render();window.scrollTo({top:sectionScroll[next],behavior:'instant'});}
@@ -76,8 +73,6 @@ document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('di
 $('#rating-dialog').addEventListener('close',()=>{if(ratingReturn){const id=ratingReturn;ratingReturn=null;openDetail(id);}});
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
 document.querySelectorAll('.shop').forEach(b=>b.onclick=()=>switchSection(b.dataset.section));
-$('#search').oninput=render;['#service-filter','#type-filter','#reaction-filter'].forEach(s=>$(s).onchange=render);
-$('#filter-toggle').onclick=()=>{const expanded=$('#filter-toggle').getAttribute('aria-expanded')==='true';$('#filter-toggle').setAttribute('aria-expanded',!expanded);$('#filters').hidden=expanded;};
 function settings(){ $('#storage-status').textContent=storageOK?'Changes are stored on this device. Backups do not include movie artwork.':'Device storage is unavailable. Please export a backup before leaving.';$('#settings-dialog').showModal(); }
 $('#settings').onclick=settings;$('#about').onclick=settings;
 $('#export').onclick=()=>{const blob=new Blob([JSON.stringify({app:'merry-watch',version:1,exportedAt:new Date().toISOString(),records},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`merry-watch-backup-${localDay()}.json`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);notify('Watch list exported. Keep it somewhere safe.');};
@@ -85,4 +80,4 @@ $('#import').onchange=async e=>{const file=e.target.files[0];if(!file)return;try
 window.addEventListener('storage',e=>{if(e.key===KEY){readStorage();render();}});
 function refreshDate(){const day=localDay();if(day!==previousDay){previousDay=day;render();}}
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDate();});setInterval(refreshDate,60000);
-try{const response=await fetch('catalogue.json?v=3');if(!response.ok)throw new Error('Catalogue request failed');catalogue=await response.json();movies=catalogue.movies;readStorage();render();for(const state of ['watch','soon','watched']){const image=new Image();image.src=`assets/shops-${state}-v2.webp`;}if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});}catch(error){$('#movie-list').innerHTML='<div class="empty"><h3>The village couldn’t open</h3><p>Please refresh while connected to the internet to load the collection.</p><button class="secondary" id="retry">Try again</button></div>';$('#retry').onclick=()=>location.reload();}
+try{const response=await fetch('catalogue.json?v=5');if(!response.ok)throw new Error('Catalogue request failed');catalogue=await response.json();movies=catalogue.movies;readStorage();render();for(const state of ['watch','soon','watched']){const image=new Image();image.src=`assets/shops-${state}-v2.webp`;}if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});}catch(error){$('#movie-list').innerHTML='<div class="empty"><h3>The village couldn’t open</h3><p>Please refresh while connected to the internet to load the collection.</p><button class="secondary" id="retry">Try again</button></div>';$('#retry').onclick=()=>location.reload();}

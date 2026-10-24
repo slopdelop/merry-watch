@@ -11,9 +11,9 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 ## Included in V1
 
 - All 34 movies from the supplied Hallmark October–December 2026 schedule, plus The Hallmark Christmas Experience special.
-- AI frosted-cookie caricature thumbnails for every title, with original official stills retained in expanded details; original short synopses, cast, TV premiere and next-day Hallmark+ dates.
+- Simple, bakeable iced-cookie motif thumbnails for every title, with original official stills retained in expanded details; original short synopses, cast, TV premiere and next-day Hallmark+ dates.
 - Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, and an unconfirmed-new-season entry for The Great Christmas Light Fight.
-- To watch / Coming soon / Watched, search, service and type filters, and reaction filtering in Watched.
+- To watch / Coming soon / Watched through the illuminated shop windows. The collection opens directly to the movie list, with no search, filters, counts or introductory headings.
 - Meh / OK / Good / Great / Holiday magic. Ratings are optional; watched status can be undone or edited.
 - An episode counter for competition shows. A show only moves to Watched when explicitly finished.
 - Device-local storage and JSON backup export/import. No cross-device sync. Local previews and the eventual GitHub Pages address have separate storage; use export/import to transfer progress.
@@ -27,7 +27,7 @@ The Hallmark schedule and movie details were checked against the [official 2026 
 
 Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). All 38 titles have locally saved official artwork. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
 
-Film stills belong to Hallmark Media. Other show artwork belongs to its credited owners. The village, storefront states, and cookie portraits were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
+Film stills belong to Hallmark Media. Other show artwork belongs to its credited owners. Fraunces soft-serif headings and movie titles with Nunito body text are self-hosted for reliable loading. The village, storefront states, and cookie motifs were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
 
 ## GitHub Pages
 
