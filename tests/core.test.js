@@ -23,16 +23,28 @@ test('watched status removes a title from both unwatched sections',()=>{
   assert.equal(belongs(m,'watch',r,'2026-10-24'),false);
   assert.equal(belongs(m,'soon',r,'2026-10-15'),false);
 });
-test('unconfirmed streaming date is never treated as available',()=>{
+test('Holiday Baking streams November 3; Light Fight is hidden without losing history',()=>{
   const m=c.movies.find(m=>m.id==='holiday-baking-championship');
-  assert.equal(isAvailable(m,'2027-01-01'),false);
-  assert.equal(belongs(m,'soon',{},'2027-01-01'),true);
+  assert.equal(m.service,'HBO Max');
+  assert.equal(m.premiere,'2026-11-02');
+  assert.equal(m.streaming,'2026-11-03');
+  assert.equal(isAvailable(m,'2026-11-02'),false);
+  assert.equal(belongs(m,'watch',{},'2026-11-03'),true);
   const light=c.movies.find(m=>m.id==='great-christmas-light-fight');
   assert.equal(isAvailable(light,'2026-10-24'),false);
   assert.equal(light.premiere,null);
   assert.equal(light.streaming,null);
   assert.equal(light.previousStreaming,'2025-12-05');
-  assert.equal(belongs(light,'soon',{},'2026-10-24'),true);
+  for(const today of ['2026-11-12','2027-01-01']){
+    assert.equal(belongs(light,'soon',{},today),false);
+    assert.equal(belongs(light,'watch',{},today),false);
+  }
+  const history={watched:true,feeling:'Holiday magic',episodes:6,watchedAt:'2026-10-24T20:00:00Z',starred:true};
+  const backup={app:'merry-watch',version:1,records:{[light.id]:history}};
+  const restored=validateBackup(JSON.parse(JSON.stringify(backup)),c.movies);
+  assert.deepEqual(restored[light.id],history);
+  assert.equal(belongs(light,'watched',restored,'2026-11-12'),true);
+  assert.equal(belongs(light,'wontWatch',{[light.id]:{watched:false,wontWatch:true}},'2026-11-12'),true);
 });
 test('episode progress leaves a show in To watch until explicitly finished',()=>{
   const m=c.movies.find(m=>m.id==='wizards-of-baking');
@@ -92,7 +104,7 @@ test('backups preserve won’t-watch choices and reject conflicting or malformed
   assert.equal(validateBackup({...backup,records:{[id]:{...records[id],wontWatch:false}}},c.movies)[id].wontWatch,false);
 });
 test('unconfirmed stream dates appear after all dated releases',()=>{
-  const sorted=[...c.movies].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
+  const sorted=[...c.movies,{id:'unknown',streaming:null}].filter(m=>belongs(m,'soon',{},'2026-10-24')).sort((a,b)=>compareMovies(a,b,'soon',{}));
   const firstUnknown=sorted.findIndex(m=>!m.streaming);
   assert.ok(firstUnknown>=0);
   assert.ok(sorted.slice(0,firstUnknown).every(m=>m.streaming));
@@ -129,4 +141,51 @@ test('new streamer releases use their announced dates rather than the Hallmark n
     assert.equal(isAvailable(m,date),true,id);
   }
   assert.equal(c.movies.find(m=>m.id==='gabbys-dollhouse-bakers-and-makers').totalEpisodes,4);
+});
+
+test('November expansion preserves every existing title and all saved watch fields',()=>{
+  const ids=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-november-expansion-ids.json',import.meta.url),'utf8'));
+  assert.equal(ids.length,48);
+  const feelings=['Meh','OK','Good','Great','Holiday magic'];
+  const records=Object.fromEntries(ids.map((id,i)=>{
+    assert.ok(c.movies.some(m=>m.id===id),`Existing ID missing: ${id}`);
+    return [id,{watched:true,feeling:feelings[i%feelings.length],episodes:i%9,watchedAt:`2026-10-24T20:${String(i).padStart(2,'0')}:00Z`,starred:i%2===0}];
+  }));
+  const imported=validateBackup(JSON.parse(JSON.stringify({app:'merry-watch',version:1,records})),c.movies);
+  assert.deepEqual(imported,records);
+  assert.equal(c.movies.filter(m=>belongs(m,'watched',imported,'2026-11-12')).length,48);
+  // The same old IDs also retain optional fields when watching is still in progress or skipped.
+  const inProgress=Object.fromEntries(ids.map((id,i)=>[id,{watched:false,feeling:null,episodes:i,watchedAt:null,wontWatch:i%2===0,starred:i%3===0}]));
+  assert.deepEqual(validateBackup({app:'merry-watch',version:1,records:inProgress},c.movies),inProgress);
+});
+
+test('November additions use US streaming dates and their own release-day boundaries',()=>{
+  const releases={
+    'big-bargain-holiday-showdown':['HBO Max','2026-11-11'],
+    'tournament-of-champions-all-star-christmas':['HBO Max','2026-11-09'],
+    'next-level-baker':['Hulu','2026-11-20'],
+    'great-british-baking-show-holidays':['Netflix','2026-11-23'],
+    'pillsbury-bake-off-classic':['Paramount+','2026-11-24'],
+    'sweet-deceit-holiday':['HBO Max','2026-11-17'],
+    'beat-bobby-flay-holiday-throwdown':['HBO Max','2026-11-18'],
+    'the-12-dates-of-christmas-2026':['Hulu','2026-11-06'],
+    'the-holiday-spark':['The Roku Channel','2026-11-02'],
+    'second-chance-holiday':['The Roku Channel','2026-11-05'],
+    'the-christmas-rewrite':['Peacock','2026-11-06'],
+    'postcards-for-christmas':['Hulu','2026-11-13'],
+    'unbearable-christmas':['Peacock','2026-11-20'],
+    'clashing-through-the-snow':['Prime Video','2026-11-23'],
+    'all-for-christmas':['Netflix','2026-11-24'],
+    'dasher':['Disney+','2026-11-28'],
+    'diary-of-a-wimpy-kid-christmas-the-getaway':['Disney+','2026-12-04']
+  };
+  assert.equal(Object.keys(releases).length,17);
+  for(const [id,[service,date]] of Object.entries(releases)){
+    const movie=c.movies.find(m=>m.id===id);
+    assert.ok(movie,id);assert.equal(movie.service,service);assert.equal(movie.streaming,date);
+    const before=new Date(date+'T12:00:00Z');before.setUTCDate(before.getUTCDate()-1);
+    assert.equal(belongs(movie,'soon',{},before.toISOString().slice(0,10)),true,id);
+    assert.equal(belongs(movie,'watch',{},date),true,id);
+    assert.equal(belongs(movie,'soon',{},date),false,id);
+  }
 });

@@ -10,6 +10,8 @@ export function belongs(movie, section, records, today = localDay()) {
   if (section === 'wontWatch') return false;
   const watched = Boolean(records[movie.id]?.watched);
   if (section === 'watched') return watched;
+  // Keep retired IDs valid for saved history, without scheduling a nonexistent season.
+  if (movie.retired) return false;
   return !watched && (section === 'watch' ? isAvailable(movie,today) : !isAvailable(movie,today));
 }
 export function compareMovies(a,b,section,records) {

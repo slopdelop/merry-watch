@@ -12,8 +12,9 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 
 - All 34 movies from the supplied Hallmark October–December 2026 schedule, plus The Hallmark Christmas Experience special.
 - Simple, bakeable iced-cookie motif thumbnails for every title, with original official stills retained in expanded details; original short synopses, cast, TV premiere and next-day Hallmark+ dates.
-- Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, and an unconfirmed-new-season entry for The Great Christmas Light Fight.
+- Holiday Baking Championship season 13, Harry Potter: Wizards of Baking season 3, with confirmed HBO Max streaming dates. Light Fight is hidden from unwatched lists because no 2026 season was picked up; its original ID remains valid for saved history.
 - Ten additional confirmed 2026 releases: five Netflix films, Netflix’s four-episode Bakers and Makers holiday competition, two Apple TV specials, Prime Video’s The Man with the Bag, and Tubi’s Christmas at the Zoo. Each has a new motif cookie and its own streaming date.
+- Seventeen November 12 additions across HBO Max, Hulu, Netflix, Peacock, The Roku Channel, Prime Video, Paramount+ and Disney+, each with a new cookie and a short original tagline.
 - Steady warm fairy lights, evergreen sprigs and red berries decorate the list margins. Close buttons stay pinned at the upper right while detail, rating and settings sheets scroll.
 - To watch / Coming soon / Watched through the illuminated shop windows. The collection opens directly to the movie list, with no search, filters, counts or introductory headings.
 - Star any title in its details to give its cookie thumbnail a gold frame. Stars are independent of watched or skipped status, persist on this device and are included in backups. Date ordering stays the same.
@@ -26,11 +27,11 @@ Run `npm start`, then open http://localhost:4173. Run `npm test` for catalogue, 
 
 ## Data and availability
 
-Catalogue checked October 24, 2026. Streaming dates use the device's local calendar date; a scheduled day is not a guarantee of availability at a particular hour. Hallmark dates are TV premiere + one calendar day. If a service has not announced a streaming date, V1 shows it as unconfirmed rather than deriving a date. The Great Christmas Light Fight entry tracks a prospective new season under dates to confirm. No 2026 premiere was found in ABC’s announcements as of October 24, 2026. The last confirmed season (13) premiered on ABC December 4, 2025 and on Hulu/Disney+ December 5, 2025; this historical date is shown explicitly in its details. [Official streaming announcement](https://press.disneyplus.com/news/holiday-2025).
+Catalogue checked November 12, 2026. Streaming dates use the device’s local calendar day. Hallmark dates are TV premiere + one day; other dates come from service schedules or linked announcements. Holiday Baking Championship season 13 streams on HBO Max from November 3, after its November 2 Food Network premiere. Light Fight has no 2026 season and is excluded from both unwatched lists. It remains in the catalogue so watched records, ratings, stars and skipped choices retain their original ID. Its historical 2025 streaming date is labeled separately.
 
 The Hallmark schedule and movie details were checked against the [official 2026 preview](https://www.hallmarkchannel.com/christmas/countdown-to-christmas-2026-preview/) and linked individual title pages. Each catalogue record includes its original listing and original artwork URL.
 
-Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). There are 48 titles. Official artwork is saved locally where available; Bakers and Makers uses its cookie in expanded details until official competition artwork is available. Guarding Stars uses the official announcement portraits; The Christmas Switch uses its official first-look video thumbnail. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
+Additional official sources: [Food Network holiday lineup](https://www.foodnetwork.com/shows/photos/food-network-holiday-programming-winter-2026), [Wizards of Baking season 3](https://www.foodnetwork.com/shows/harry-potter-wizards-of-baking/articles/harry-potter-wizards-of-baking-season-three), and [Hulu's Light Fight listing](https://www.hulu.com/series/the-great-christmas-light-fight-08671001-3106-480d-9c94-d20a9934b44f). There are 65 title records, including the retained inactive Light Fight record. Official artwork is saved locally where available; Titles without accessible, verified promotional artwork use their cookie in details too; the credit explicitly identifies this. Guarding Stars uses the official announcement portraits; The Christmas Switch uses its official first-look video thumbnail. Holiday Baking Championship uses general series artwork from Hulu; Wizards artwork is an official season 2 still from Wizarding World.
 
 Film stills and promotional artwork belong to their credited owners, including Hallmark Media, Netflix, Amazon MGM Studios, Apple TV, Peanuts, WildBrain, The Jim Henson Company and Tubi / Very Merry Entertainment. Fraunces soft-serif headings and movie titles with Nunito body text are self-hosted for reliable loading. The village, storefront states, and cookie motifs were generated with OpenAI's built-in image generation tool. The title and shop labels are integrated into the artwork. Each navigation state has its own lamp-lit panorama; images render in their native aspect ratios with no stretching. The full prompt set is saved in artwork-prompts.json. This independent personal tracker is not affiliated with the networks.
 
@@ -53,7 +54,35 @@ Official announcements confirm these US streaming releases:
 
 Sources: [Netflix fall slate](https://www.netflix.com/tudum/features/new-fall-movies-on-netflix-2026), [Gospel release announcement](https://www.netflix.com/tudum/articles/the-gospel-of-christmas-news-cast-release-date-photos), [The Christmas Switch](https://about.netflix.com/en/news/netflix-unwraps-first-look-at-swedish-holiday-film-the-christmas-switch), [Guarding Stars](https://www.netflix.com/tudum/articles/leighton-meester-jared-padalecki-bodyguard-adaptation-cast-news-movie-name), [Bakers and Makers](https://www.netflix.com/tudum/articles/new-netflix-preschool-shows-games), [Prime Video](https://www.aboutamazon.com/news/entertainment/the-man-with-the-bag-arnold-schwarzenegger-christmas-movie-prime-video), [Apple TV holiday slate](https://www.apple.com/tv-pr/news/2026/09/theres-no-place-like-apple-tv-for-the-holidays/), [Tubi](https://tubitv.com/movies/100063504/christmas-at-the-zoo).
 
-HBO Max’s Wizards of Baking is already included. No additional suitable new HBO Max title or new 2026 original Christmas movie on Peacock, Hulu or Paramount+ was verified in the official pages reviewed. This is a research result, not a claim that none will be announced. Paramount+’s November list contains older Christmas favorites. Disney+’s A Proud Family Wizmas is a scripted-series episode, so it is excluded. Returning library films, theatrical releases without confirmed streaming dates and ordinary scripted series were not added as new streaming originals. The coverage audit is recorded in catalogue.json. No automatic monitoring is configured.
+## November 12 additions
+
+US streaming dates; television premieres are shown separately inside the app.
+
+| Title | Service | Streaming date |
+| --- | --- | --- |
+| Big Bargain Holiday Showdown | HBO Max | 2026-11-11 |
+| Tournament of Champions: All-Star Christmas | HBO Max | 2026-11-09 |
+| Next Level Baker | Hulu | 2026-11-20 |
+| The Great British Baking Show: Holidays | Netflix | 2026-11-23 |
+| Pillsbury Bake-Off Classic | Paramount+ | 2026-11-24 |
+| Sweet Deceit — Holiday Episodes | HBO Max | 2026-11-17 |
+| Beat Bobby Flay: Holiday Throwdown | HBO Max | 2026-11-18 |
+| The 12 Dates of Christmas | Hulu | 2026-11-06 |
+| The Holiday Spark | The Roku Channel | 2026-11-02 |
+| Second Chance Holiday | The Roku Channel | 2026-11-05 |
+| The Christmas Rewrite | Peacock | 2026-11-06 |
+| Postcards for Christmas | Hulu | 2026-11-13 |
+| Unbearable Christmas | Peacock | 2026-11-20 |
+| Clashing Through the Snow | Prime Video | 2026-11-23 |
+| All for Christmas | Netflix | 2026-11-24 |
+| Dasher | Disney+ | 2026-11-28 |
+| Diary of a Wimpy Kid Christmas: The Getaway | Disney+ | 2026-12-04 |
+
+Each record links its listing and, where separate, its date evidence. Pillsbury is dated for November 24 on demand; Paramount+ Premium also offers the November 23 CBS broadcast live. The 12 Dates of Christmas is the Lucy Hale / Ian Harding 2026 film, distinct from the 2011 movie; its reported debut is November 6. Baking Show: Holidays tracks only the two new US Netflix specials. Sweet Deceit and Bobby Flay track their holiday runs. Ordinary scripted shows and individual scripted episodes remain excluded.
+
+### Saved-history compatibility
+
+All 48 pre-expansion IDs are retained. The storage key (`merry-watch-v1`) and version-1 backup format are unchanged; catalogue updates do not write or reset device storage. Regression tests round-trip ratings, watched timestamps, episode counts, stars and skipped choices for every original ID. Inactive titles remain valid when importing old backups and still appear in Watched if previously watched. The app origin is unchanged.
 
 ## GitHub Pages
 
